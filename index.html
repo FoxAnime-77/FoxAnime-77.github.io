@@ -1,1 +1,81 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fox Anime Wallpaper</title>
+<meta name="description" content="Discover HD and 4K anime wallpapers at Fox Anime Wallpaper.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#101010;color:#fff;font-family:Arial,sans-serif}
+header{height:75px;background:#181818;display:flex;align-items:center;padding:12px 5%;gap:12px;border-bottom:1px solid #333}
+.logo{width:48px;height:48px;object-fit:contain;border-radius:50%}
+.brand{font-size:20px;color:#ff7020;font-weight:bold}
+.hero{min-height:340px;display:flex;align-items:center;justify-content:space-between;padding:45px 7%;background:linear-gradient(110deg,#151515,#25150e)}
+.hero-content{max-width:65%}
+.hero h1{font-size:clamp(30px,6vw,52px);color:#ff7020;margin-bottom:15px}
+.hero p{color:#ccc;line-height:1.7;margin-bottom:22px}
+.hero img{width:30%;max-width:180px;max-height:240px;object-fit:contain}
+.btn{display:inline-block;padding:12px 18px;border-radius:7px;text-decoration:none;font-weight:bold;margin:4px}
+.orange{background:#ff7020;color:#111}
+.green{background:#168b55;color:white}
+.blue{background:#168bd1;color:white}
+section{padding:30px 5%}
+.heading{color:#ff7020;font-size:25px;margin-bottom:20px}
+.search{width:100%;padding:14px;background:#202020;border:1px solid #444;border-radius:8px;color:white;font-size:16px;margin-bottom:22px}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.wall{background:#202020;border-radius:10px;overflow:hidden}
+.wall img{width:100%;height:190px;object-fit:cover;display:block}
+.wall p{padding:12px;font-weight:bold}
+.join{text-align:center;background:#191919;border-radius:12px;padding:28px}
+footer{text-align:center;padding:25px;color:#999;background:#181818;margin-top:25px}
+@media(min-width:700px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<header>
+<img class="logo" src="logo.png" alt="Fox Logo">
+<div class="brand">FOX ANIME WALLPAPER</div>
+</header>
+
+<div class="hero">
+<div class="hero-content">
+<h1>Anime Wallpapers</h1>
+<p>Your daily dose of HD and 4K anime wallpapers. Explore your favourite anime characters.</p>
+<a class="btn orange" href="#gallery">Explore Wallpapers</a>
+</div>
+<img src="luffy.png" alt="Anime character">
+</div>
+
+<section id="gallery">
+<h2 class="heading">Explore Wallpapers</h2>
+<input class="search" id="search" placeholder="Search anime wallpapers..." oninput="filterWalls()">
+<div class="gallery" id="walls">
+<div class="wall"><img src="wallpapers/naruto.jpg" alt="Naruto"><p>Naruto</p></div>
+<div class="wall"><img src="wallpapers/itachi.jpg" alt="Itachi"><p>Itachi</p></div>
+</div>
+</section>
+
+<section>
+<div class="join">
+<h2 class="heading">Join Our Anime Community</h2>
+<p>Get new anime wallpapers and updates.</p>
+<a class="btn green" href="YOUR_WHATSAPP_LINK">WhatsApp</a>
+<a class="btn blue" href="YOUR_TELEGRAM_LINK">Telegram</a>
+</div>
+</section>
+
+<footer>© 2026 Fox Anime Wallpaper</footer>
+
+<script>
+function filterWalls(){
+const q=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('.wall').forEach(w=>{
+w.style.display=w.innerText.toLowerCase().includes(q)?'block':'none';
+});
+}
+</script>
+</body>
+</html>
+
