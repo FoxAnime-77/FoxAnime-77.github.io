@@ -16,7 +16,6 @@
 :root{
 --orange:#ff6415;
 --purple:#b32cff;
---pink:#ed43c9;
 --bg:#08060c;
 }
 
@@ -34,7 +33,7 @@ a{text-decoration:none;color:inherit}
 /* HEADER */
 
 header{
-height:105px;
+min-height:105px;
 display:flex;
 align-items:center;
 justify-content:space-between;
@@ -55,12 +54,11 @@ min-width:230px;
 
 .brand img{
 width:88px;
-height:85px;
+height:88px;
 object-fit:cover;
 object-position:center;
 border-radius:50%;
 border:2px solid var(--orange);
-background:#fff;
 }
 
 .brand-name{
@@ -96,8 +94,7 @@ flex-direction:column;
 
 nav a i{font-size:19px}
 
-nav a:hover,
-nav a.active{color:var(--orange)}
+nav a:hover,nav a.active{color:var(--orange)}
 
 .social{
 display:flex;
@@ -130,7 +127,7 @@ padding:45px 6%;
 overflow:hidden;
 background:
 linear-gradient(90deg,#09060df5 0%,#09060dcf 45%,#09060d33),
-url('images/hero-bg.jpg') center/cover;
+url('hero-bg.png') center/cover no-repeat;
 }
 
 .hero-text{
@@ -157,7 +154,7 @@ font-size:clamp(42px,6vw,76px);
 line-height:1.05;
 }
 
-.hero h1 .white{color:#fff}
+.hero h1 .white{color:white}
 .hero h1 .orange{color:var(--orange)}
 
 .hero p{
@@ -201,15 +198,13 @@ border:2px solid var(--purple);
 color:var(--purple);
 }
 
-/* LUFFY IMAGE */
-
 .hero-character{
 position:absolute;
-right:4%;
+right:3%;
 bottom:0;
 width:36%;
 max-width:340px;
-height:92%;
+height:95%;
 object-fit:contain;
 object-position:center bottom;
 filter:drop-shadow(0 0 20px #b32cff55);
@@ -223,9 +218,7 @@ z-index:2;
 
 /* SECTIONS */
 
-.section{
-padding:30px 3.5% 10px;
-}
+.section{padding:30px 3.5% 10px}
 
 .section-heading{
 display:flex;
@@ -428,7 +421,7 @@ border:2px solid var(--purple);
 border-radius:30px 30px 0 0;
 background:
 linear-gradient(90deg,#090611ed,#09061199),
-url('images/community-bg.jpg') center/cover;
+url('community-bg.jpg') center/cover no-repeat;
 }
 
 .community h2{
@@ -449,10 +442,8 @@ margin:5px 0 20px;
 width:190px;
 height:190px;
 object-fit:cover;
-object-position:center;
 border-radius:50%;
 border:3px solid var(--orange);
-background:#fff;
 align-self:flex-end;
 }
 
@@ -514,15 +505,11 @@ padding:8px 3%;
 gap:8px;
 }
 
-.brand{
-min-width:0;
-gap:5px;
-}
+.brand{min-width:0;gap:5px}
 
 .brand img{
 width:52px;
 height:52px;
-border-radius:50%;
 }
 
 .brand-name{font-size:16px}
@@ -586,7 +573,6 @@ gap:10px;
 .category{height:165px}
 
 .section-heading h2{font-size:25px}
-
 .section-heading h2:before{height:28px}
 
 .wallpapers{
@@ -602,7 +588,6 @@ min-height:190px;
 }
 
 .community h2{font-size:25px}
-
 .community p{font-size:11px}
 
 .community-logo{
@@ -618,16 +603,12 @@ padding:10px;
 }
 
 footer{flex-wrap:wrap}
-
 footer .brand{min-width:0}
 }
-
-/* SMALL MOBILE */
 
 @media(max-width:390px){
 
 nav{gap:8px}
-
 nav a{font-size:9px}
 
 header .social a{
@@ -641,7 +622,6 @@ right:0;
 }
 
 .hero-text{width:70%}
-
 .hero h1{font-size:32px}
 
 .community-logo{
@@ -667,9 +647,7 @@ letter-spacing:2px;
 }
 
 nav{gap:6px}
-
 nav a{font-size:8px}
-
 nav a i{font-size:14px}
 
 header .social a{
@@ -684,13 +662,10 @@ font-size:12px;
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
 <a class="brand" href="#">
-<img src="images/logo.jpg" alt="Fox logo">
-
+<img src="logo.jpg" alt="Fox logo">
 <div class="brand-name">
 <span>FOX</span> ANIME
 <small>W A L L P A P E R</small>
@@ -701,15 +676,12 @@ font-size:12px;
 <a class="active" href="#">
 <i class="fa-solid fa-house"></i>Home
 </a>
-
 <a href="#anime">
 <i class="fa-solid fa-border-all"></i>Anime
 </a>
-
 <a href="#wallpapers">
 <i class="fa-regular fa-image"></i>Wallpapers
 </a>
-
 <a href="#community">
 <i class="fa-solid fa-circle-info"></i>About
 </a>
@@ -719,7 +691,6 @@ font-size:12px;
 <a class="whatsapp" href="YOUR_WHATSAPP_LINK">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
-
 <a class="telegram" href="YOUR_TELEGRAM_LINK">
 <i class="fa-brands fa-telegram"></i>
 </a>
@@ -727,15 +698,10 @@ font-size:12px;
 
 </header>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="hero-text">
-
-<div class="welcome">
-<span>//</span> WELCOME TO FOX ANIME
-</div>
+<div class="welcome"><span>//</span> WELCOME TO FOX ANIME</div>
 
 <h1>
 <span class="white">Anime</span><br>
@@ -748,27 +714,18 @@ Explore your favourite anime characters.
 </p>
 
 <div class="actions">
-
 <a class="btn btn-orange" href="#wallpapers">
-<i class="fa-solid fa-play"></i>
-Explore Now →
+<i class="fa-solid fa-play"></i> Explore Now →
 </a>
-
 <a class="btn btn-purple" href="#community">
-<i class="fa-solid fa-star"></i>
-Join Community
+<i class="fa-solid fa-star"></i> Join Community
 </a>
-
 </div>
 </div>
 
-<img class="hero-character"
-src="images/luffy.jpg"
-alt="Luffy Gear 5">
+<img class="hero-character" src="Luffy.jpg" alt="Luffy Gear 5">
 
 </section>
-
-<!-- ANIME UNIVERSE -->
 
 <section class="section" id="anime">
 
@@ -782,37 +739,37 @@ alt="Luffy Gear 5">
 <div class="categories">
 
 <a class="category" href="#wallpapers">
-<img src="images/naruto-card.jpg" alt="Naruto">
+<img src="naruto-card.jpg" alt="Naruto">
 <strong>NARUTO</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
 <a class="category" href="#wallpapers">
-<img src="images/onepiece-card.jpg" alt="One Piece">
+<img src="onepiece-card.jpg" alt="One Piece">
 <strong>ONE PIECE</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
 <a class="category" href="#wallpapers">
-<img src="images/demonslayer-card.jpg" alt="Demon Slayer">
+<img src="demonslayer-card.jpg" alt="Demon Slayer">
 <strong>DEMON SLAYER</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
 <a class="category" href="#wallpapers">
-<img src="images/dragonball-card.jpg" alt="Dragon Ball">
+<img src="dragonball-card.jpg" alt="Dragon Ball">
 <strong>DRAGON BALL</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
 <a class="category" href="#wallpapers">
-<img src="images/jujutsu-card.jpg" alt="Jujutsu Kaisen">
+<img src="jujutsu-card.jpg" alt="Jujutsu Kaisen">
 <strong>JUJUTSU KAISEN</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
 <a class="category" href="#wallpapers">
-<img src="images/aot-card.jpg" alt="Attack on Titan">
+<img src="aot-card.jpg" alt="Attack on Titan">
 <strong>ATTACK ON TITAN</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
@@ -820,26 +777,18 @@ alt="Luffy Gear 5">
 </div>
 </section>
 
-<!-- LATEST WALLPAPERS -->
-
 <section class="section latest" id="wallpapers">
 
 <div class="section-heading">
-
 <h2>LATEST <span>WALLPAPERS</span></h2>
 
 <div class="search-area">
-
-<input
-class="search"
-id="search"
+<input class="search" id="search"
 placeholder="⌕ Search anime wallpapers..."
 oninput="filterWalls()">
-
 <button class="filter" aria-label="Filter">
 <i class="fa-solid fa-sliders"></i>
 </button>
-
 </div>
 </div>
 
@@ -848,44 +797,44 @@ oninput="filterWalls()">
 <div class="wallpapers">
 
 <div class="wall">
-<img src="images/itachi.jpg" alt="Itachi">
+<img src="itachi.jpg" alt="Itachi">
 <span class="quality">4K</span>
 <div class="wall-bottom">
 <strong>Itachi Uchiha</strong>
-<a class="download" href="images/itachi.jpg" download>
+<a class="download" href="itachi.jpg" download>
 <i class="fa-solid fa-download"></i>
 </a>
 </div>
 </div>
 
 <div class="wall">
-<img src="images/naruto.jpg" alt="Naruto">
+<img src="naruto.jpg" alt="Naruto">
 <span class="quality">4K</span>
 <div class="wall-bottom">
 <strong>Naruto Uzumaki</strong>
-<a class="download" href="images/naruto.jpg" download>
+<a class="download" href="naruto.jpg" download>
 <i class="fa-solid fa-download"></i>
 </a>
 </div>
 </div>
 
 <div class="wall">
-<img src="images/anime3.jpg" alt="Anime wallpaper">
+<img src="anime3.jpg" alt="Anime wallpaper">
 <span class="quality">4K</span>
 <div class="wall-bottom">
 <strong>Anime Collection</strong>
-<a class="download" href="images/anime3.jpg" download>
+<a class="download" href="anime3.jpg" download>
 <i class="fa-solid fa-download"></i>
 </a>
 </div>
 </div>
 
 <div class="wall">
-<img src="images/zoro.jpg" alt="Zoro">
+<img src="zoro.jpg" alt="Zoro">
 <span class="quality">4K</span>
 <div class="wall-bottom">
 <strong>Roronoa Zoro</strong>
-<a class="download" href="images/zoro.jpg" download>
+<a class="download" href="zoro.jpg" download>
 <i class="fa-solid fa-download"></i>
 </a>
 </div>
@@ -894,18 +843,13 @@ oninput="filterWalls()">
 </div>
 </section>
 
-<!-- COMMUNITY -->
-
 <section class="community" id="community">
 
 <div>
-
 <h2>JOIN THE <span>FOX COMMUNITY</span></h2>
-
 <p>Get fresh anime wallpapers, updates and more!</p>
 
 <div class="join-buttons">
-
 <a class="btn join-wa" href="YOUR_WHATSAPP_LINK">
 <i class="fa-brands fa-whatsapp"></i>
 Join WhatsApp Channel →
@@ -915,29 +859,21 @@ Join WhatsApp Channel →
 <i class="fa-brands fa-telegram"></i>
 Join Telegram Channel →
 </a>
-
 </div>
 </div>
 
-<img class="community-logo"
-src="images/logo.jpg"
-alt="Fox Anime logo">
+<img class="community-logo" src="logo.jpg" alt="Fox Anime logo">
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
 <a class="brand" href="#">
-
-<img src="images/logo.jpg" alt="Fox logo">
-
+<img src="logo.jpg" alt="Fox logo">
 <div class="brand-name">
 <span>FOX</span> ANIME
 <small>W A L L P A P E R</small>
 </div>
-
 </a>
 
 <div class="copyright">
@@ -946,41 +882,28 @@ Made for Anime Lovers © 2026
 </div>
 
 <div class="social">
-
 <a class="whatsapp" href="YOUR_WHATSAPP_LINK">
 <i class="fa-brands fa-whatsapp"></i>
 </a>
-
 <a class="telegram" href="YOUR_TELEGRAM_LINK">
 <i class="fa-brands fa-telegram"></i>
 </a>
-
 </div>
 
 </footer>
 
-<!-- SEARCH -->
-
 <script>
 function filterWalls(){
 
-const q=document
-.getElementById('search')
-.value
-.toLowerCase();
+const q=document.getElementById('search').value.toLowerCase();
 
 document.querySelectorAll('.wall').forEach(w=>{
-
-w.style.display=
-w.innerText.toLowerCase().includes(q)
-?'block'
-:'none';
-
+w.style.display=w.innerText.toLowerCase().includes(q)
+?'block':'none';
 });
 
 }
 </script>
 
 </body>
-  </html>
-  
+</html>
