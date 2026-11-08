@@ -3,21 +3,27 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>FOX ANIME WALLPAPER</title>
-<meta name="description" content="Explore Fox Anime Wallpaper - your anime wallpaper community.">
+<meta name="description" content="Fox Anime Wallpaper - HD and 4K anime wallpapers.">
 
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 :root{
 --orange:#ff6415;
---purple:#b32cff;
---pink:#ec42c9;
+--purple:#a52cff;
 --bg:#08060d;
+--card:#15101d;
 }
 
 html{scroll-behavior:smooth}
@@ -29,20 +35,26 @@ font-family:Poppins,sans-serif;
 overflow-x:hidden;
 }
 
-a{text-decoration:none;color:inherit}
+a{
+text-decoration:none;
+color:inherit;
+}
 
 /* HEADER */
+
 header{
-min-height:95px;
+position:sticky;
+top:0;
+z-index:100;
+min-height:85px;
+padding:10px 5%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:10px 4%;
-background:#09070d;
-border-bottom:2px solid var(--purple);
-position:sticky;
-top:0;
-z-index:20;
+gap:15px;
+background:#09070df5;
+border-bottom:1px solid #a52cff;
+backdrop-filter:blur(15px);
 }
 
 .brand{
@@ -52,46 +64,45 @@ gap:10px;
 }
 
 .brand img{
-width:76px;
-height:76px;
-object-fit:cover;
+width:62px;
+height:62px;
 border-radius:50%;
+object-fit:cover;
 border:2px solid var(--orange);
 }
 
 .brand-name{
 font-family:'Permanent Marker',cursive;
-font-size:24px;
-line-height:1.1;
+font-size:21px;
 }
 
 .brand-name span{color:var(--orange)}
 
 .brand small{
 display:block;
-font-size:9px;
-letter-spacing:5px;
+font-family:Poppins,sans-serif;
+font-size:8px;
+letter-spacing:4px;
 text-align:center;
 }
 
 nav{
 display:flex;
-align-items:center;
 gap:25px;
+align-items:center;
 }
 
 nav a{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:5px;
 font-size:12px;
-color:#ddd;
+color:#ccc;
+transition:.3s;
 }
 
-nav a i{font-size:20px}
+nav a i{
+margin-right:5px;
+}
 
-nav a:hover,nav .active{color:var(--orange)}
+nav a:hover{color:var(--orange)}
 
 .social{
 display:flex;
@@ -99,412 +110,492 @@ gap:10px;
 }
 
 .social a{
-width:43px;
-height:43px;
+width:38px;
+height:38px;
+border-radius:50%;
 display:grid;
 place-items:center;
-border:1px solid #514052;
-border-radius:50%;
-background:#15121b;
-font-size:19px;
+background:#191321;
+border:1px solid #45304e;
+font-size:17px;
 }
 
 .whatsapp{color:#20df72}
 .telegram{color:#16a8ed}
 
 /* HERO */
+
 .hero{
-min-height:470px;
+min-height:520px;
 position:relative;
 display:flex;
 align-items:center;
-padding:50px 6%;
+padding:60px 7%;
 overflow:hidden;
 background:
-linear-gradient(90deg,#08060df5,#08060dcf 55%,#08060d88),
-url('hero-bg.jpg') center/cover no-repeat;
+radial-gradient(ellipse at 80% 50%,#45135c66,transparent 45%),
+linear-gradient(110deg,#08060d,#100918 65%,#1c0b25);
+}
+
+.hero:before{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+border:1px solid #a52cff33;
+border-radius:50%;
+right:8%;
+top:5%;
+box-shadow:0 0 80px #a52cff22;
 }
 
 .hero-text{
-width:68%;
 position:relative;
-z-index:2;
+z-index:3;
+width:60%;
 }
 
 .welcome{
+color:#d8a5ff;
 font-size:12px;
-letter-spacing:3px;
-color:#e9baff;
+letter-spacing:4px;
 margin-bottom:20px;
 }
 
-.welcome span{color:var(--purple);font-size:22px}
+.welcome span{color:var(--orange)}
 
 .hero h1{
 font-family:'Permanent Marker',cursive;
-font-size:clamp(45px,7vw,78px);
-line-height:1.1;
+font-size:clamp(45px,7vw,85px);
+line-height:1.12;
 }
 
-.hero h1 .orange{color:var(--orange)}
+.hero h1 span{color:var(--orange)}
 
 .hero p{
-color:#ddd;
-font-size:15px;
-line-height:2;
 margin-top:20px;
+color:#c9c4d0;
+font-size:14px;
+line-height:2;
 }
 
 .actions{
 display:flex;
-gap:15px;
+gap:13px;
 flex-wrap:wrap;
-margin-top:25px;
+margin-top:30px;
 }
 
 .btn{
-padding:14px 23px;
-border-radius:30px;
-font-size:14px;
-font-weight:700;
 display:inline-flex;
 align-items:center;
-gap:10px;
+justify-content:center;
+gap:9px;
+padding:13px 22px;
+border-radius:30px;
+font-size:12px;
+font-weight:700;
 transition:.3s;
 }
 
-.btn:hover{transform:translateY(-4px)}
+.btn:hover{
+transform:translateY(-4px);
+}
 
 .btn-orange{
-background:linear-gradient(90deg,#ff8500,#ff5815);
-color:#160800;
-box-shadow:0 0 20px #ff641555;
+background:linear-gradient(90deg,#ff8a00,#ff5015);
+color:#170900;
+box-shadow:0 0 25px #ff641544;
 }
 
 .btn-purple{
-border:2px solid var(--purple);
-color:var(--purple);
+border:1px solid var(--purple);
+color:white;
+background:#a52cff16;
+}
+
+/* LUFFY IMAGE */
+
+.hero-image{
+position:absolute;
+z-index:2;
+right:5%;
+bottom:0;
+width:36%;
+height:95%;
+display:flex;
+align-items:flex-end;
+justify-content:center;
 }
 
 .hero-character{
-position:absolute;
-right:6%;
-bottom:0;
-width:28%;
-max-width:300px;
-height:92%;
+width:100%;
+height:100%;
 object-fit:contain;
-object-position:bottom;
-filter:drop-shadow(0 0 16px #b32cff55);
+object-position:bottom center;
+filter:drop-shadow(0 0 20px #b32cff66);
 animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-50%{transform:translateY(-9px)}
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-12px)}
 }
 
-/* SECTIONS */
-.section{padding:35px 3.5%}
+.image-error{
+display:none;
+position:absolute;
+bottom:20px;
+right:0;
+padding:10px;
+background:#27112d;
+color:#ffb1b1;
+font-size:11px;
+border:1px solid #ff6415;
+border-radius:8px;
+}
 
-.section-heading{
+/* STATS */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+padding:20px 7%;
+background:#100b17;
+border-top:1px solid #382047;
+border-bottom:1px solid #382047;
+}
+
+.stat{
+text-align:center;
+padding:10px;
+}
+
+.stat strong{
+display:block;
+font-family:Rajdhani,sans-serif;
+font-size:28px;
+color:var(--orange);
+}
+
+.stat span{
+font-size:11px;
+color:#aaa;
+}
+
+/* SECTION */
+
+.section{
+padding:55px 5%;
+}
+
+.heading{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
-.section-heading h2{
+.heading h2{
 font-family:Rajdhani,sans-serif;
-font-size:32px;
+font-size:34px;
 font-style:italic;
 }
 
-.section-heading h2 span{color:var(--orange)}
+.heading h2 span{color:var(--orange)}
 
-.section-heading h2:before{
-content:"";
-display:inline-block;
-width:7px;
-height:36px;
-background:var(--purple);
-margin-right:15px;
-vertical-align:middle;
-}
-
-.view{
-color:var(--purple);
-font-size:14px;
-font-weight:700;
+.heading a{
+color:#c58aff;
+font-size:12px;
 }
 
 .subtitle{
-color:#aaa;
-font-size:13px;
-margin:0 0 22px 22px;
+color:#999;
+font-size:12px;
+margin-bottom:25px;
 }
 
-/* ANIME CARDS */
+/* ANIME GRID */
+
 .categories{
 display:grid;
 grid-template-columns:repeat(3,minmax(0,1fr));
-gap:16px;
+gap:18px;
 }
 
 .category{
-height:210px;
+height:230px;
 position:relative;
 overflow:hidden;
-border:1px solid var(--orange);
 border-radius:15px;
-background:#19111f;
-transition:.3s;
+border:1px solid #57336b;
+background:var(--card);
+transition:.35s;
 }
 
-.category:nth-child(even){border-color:#ff3d62}
-.category:nth-child(3n){border-color:var(--purple)}
+.category:nth-child(3n+1){border-color:#ff6415}
 
 .category img{
 width:100%;
 height:100%;
 object-fit:cover;
-transition:.4s;
+transition:.5s;
 }
 
 .category:hover{
-transform:translateY(-5px);
-box-shadow:0 0 20px #b32cff44;
+transform:translateY(-7px);
+box-shadow:0 10px 30px #a52cff33;
 }
 
-.category:hover img{transform:scale(1.08)}
+.category:hover img{
+transform:scale(1.1);
+}
 
 .category:after{
 content:"";
 position:absolute;
-inset:45% 0 0;
-background:linear-gradient(transparent,#08060d);
+inset:30% 0 0;
+background:linear-gradient(transparent,#08060df5);
 }
 
 .category strong{
 position:absolute;
+bottom:17px;
+left:17px;
 z-index:2;
-bottom:13px;
-left:14px;
 font-family:Rajdhani,sans-serif;
-font-size:19px;
-font-style:italic;
+font-size:22px;
 }
 
 .category i{
 position:absolute;
+right:17px;
+bottom:20px;
 z-index:3;
-right:12px;
-bottom:13px;
 color:var(--orange);
-font-size:21px;
+font-size:20px;
 }
 
-/* COMING SOON */
-.coming{
-margin:15px 3.5% 40px;
-padding:40px 20px;
-text-align:center;
-border:1px solid var(--purple);
+/* FEATURE */
+
+.feature{
+margin:0 5% 45px;
+padding:35px;
+border:1px solid #a52cff;
 border-radius:20px;
-background:linear-gradient(135deg,#1c1027,#100b16,#211020);
+background:
+radial-gradient(circle at 90% 10%,#a52cff33,transparent 40%),
+linear-gradient(120deg,#1c1028,#100b16);
 }
 
-.coming i{
-font-size:35px;
-color:var(--orange);
-margin-bottom:15px;
-}
-
-.coming h2{
+.feature h2{
 font-family:Rajdhani,sans-serif;
 font-size:32px;
 }
 
-.coming h2 span{color:var(--purple)}
+.feature h2 span{color:var(--orange)}
 
-.coming p{color:#aaa;font-size:13px;margin-top:8px}
+.feature p{
+color:#aaa;
+font-size:13px;
+margin:10px 0 20px;
+line-height:1.8;
+}
+
+/* WALLPAPER */
+
+.wallpaper{
+margin:30px 5% 45px;
+padding:45px 20px;
+text-align:center;
+border:1px solid #a52cff;
+border-radius:20px;
+background:linear-gradient(135deg,#1b1026,#0d0913);
+}
+
+.wallpaper i{
+font-size:40px;
+color:var(--orange);
+margin-bottom:15px;
+}
+
+.wallpaper h2{
+font-family:Rajdhani,sans-serif;
+font-size:32px;
+}
+
+.wallpaper h2 span{color:var(--purple)}
+
+.wallpaper p{
+color:#aaa;
+font-size:12px;
+margin-top:10px;
+}
 
 /* COMMUNITY */
+
 .community{
-margin:35px 3.5% 0;
+margin:40px 5%;
 padding:35px 5%;
-min-height:230px;
+border:1px solid #8736bc;
+border-radius:22px;
+background:linear-gradient(110deg,#1b1026,#110b18,#241023);
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:15px;
-border:1px solid var(--purple);
-border-radius:25px;
-background:linear-gradient(110deg,#1c1026,#100b16,#24101e);
+gap:20px;
 }
 
 .community h2{
 font-family:Rajdhani,sans-serif;
 font-size:35px;
-font-style:italic;
 }
 
 .community h2 span{color:var(--orange)}
 
 .community p{
-color:#ccc;
-font-size:13px;
-margin:8px 0 20px;
+font-size:12px;
+color:#bbb;
+margin:10px 0 20px;
 }
 
 .community-logo{
-width:150px;
-height:160px;
-object-fit:cover;
+width:130px;
+height:130px;
 border-radius:50%;
+object-fit:cover;
 border:2px solid var(--orange);
 }
 
 .join-buttons{
 display:flex;
-gap:12px;
+gap:10px;
 flex-wrap:wrap;
 }
 
-.join-wa{background:#13a94b;color:white}
+.join-wa{
+background:#13a94b;
+color:white;
+}
 
 .join-tg{
-background:linear-gradient(90deg,#8526ff,#c12bff);
+background:#872cff;
 color:white;
 }
 
 /* FOOTER */
+
 footer{
-padding:20px 4%;
+padding:25px 5%;
 background:#09070d;
-border-top:1px solid #482454;
+border-top:1px solid #472353;
 display:flex;
 align-items:center;
 justify-content:space-between;
 gap:15px;
 }
 
-footer .brand img{
-width:55px;
-height:55px;
-}
-
-footer .brand-name{font-size:19px}
-
 .copyright{
-font-size:11px;
-color:#999;
+font-size:10px;
+color:#888;
 text-align:center;
+line-height:2;
 }
 
 /* MOBILE */
+
 @media(max-width:760px){
 
 header{
-min-height:76px;
-padding:8px 3%;
-gap:7px;
+padding:10px 3%;
+gap:8px;
 }
-
-.brand{gap:5px}
 
 .brand img{
-width:48px;
-height:48px;
+width:45px;
+height:45px;
 }
 
-.brand-name{font-size:16px}
+.brand-name{font-size:15px}
 
 .brand small{
-font-size:7px;
-letter-spacing:3px;
+font-size:6px;
+letter-spacing:2px;
 }
 
 nav{gap:12px}
 
 nav a{
 font-size:10px;
-gap:5px;
 }
 
-nav a i{font-size:17px}
+nav a i{display:block;text-align:center;margin:0 0 4px}
 
-header .social{gap:6px}
+.social{gap:5px}
 
-header .social a{
-width:34px;
-height:34px;
-font-size:15px;
+.social a{
+width:30px;
+height:30px;
+font-size:14px;
 }
 
 .hero{
-min-height:365px;
+min-height:400px;
 padding:35px 5%;
 }
 
-.hero-text{width:73%}
+.hero-text{width:70%}
 
-.hero h1{font-size:clamp(34px,8vw,53px)}
+.hero h1{font-size:clamp(34px,8vw,55px)}
 
-.hero p{
-font-size:12px;
-line-height:2;
-}
+.hero p{font-size:11px}
 
 .welcome{font-size:9px}
 
-.hero-character{
-right:1%;
-width:31%;
-height:72%;
+.hero-image{
+right:0;
+width:36%;
+height:78%;
 }
 
 .btn{
-font-size:11px;
-padding:12px 15px;
+font-size:10px;
+padding:11px 13px;
 }
+
+.stats{padding:15px 3%}
+
+.stat strong{font-size:23px}
+
+.stat span{font-size:9px}
 
 .categories{
 grid-template-columns:repeat(2,minmax(0,1fr));
-gap:11px;
+gap:12px;
 }
 
 .category{height:175px}
 
-.section-heading h2{font-size:25px}
+.category strong{font-size:17px}
 
-.section-heading h2:before{height:28px}
+.section{padding:40px 4%}
 
-.subtitle{font-size:11px}
+.heading h2{font-size:27px}
 
-.community{
-padding:25px 5%;
-min-height:185px;
-}
+.feature{padding:25px}
 
-.community h2{font-size:24px}
+.community{padding:25px 4%}
 
-.community p{font-size:11px}
+.community h2{font-size:25px}
 
 .community-logo{
-width:28%;
-height:110px;
-}
-
-.join-buttons{gap:7px}
-
-.join-buttons .btn{
-font-size:10px;
-padding:10px;
+width:95px;
+height:95px;
 }
 
 footer{flex-wrap:wrap}
 
-footer .brand{min-width:0}
 }
 
 @media(max-width:390px){
@@ -518,43 +609,40 @@ justify-content:center;
 padding:8px 0 3px;
 }
 
-nav a{font-size:9px}
+.hero{min-height:365px}
 
-nav a i{font-size:15px}
-
-header .social a{
-width:28px;
-height:28px;
-}
-
-.brand-name{font-size:14px}
+.hero-text{width:73%}
 
 .hero h1{font-size:32px}
 
-.hero-text{width:72%}
-
-.hero-character{width:29%}
+.hero-image{
+width:32%;
+height:70%;
+}
 
 .community{
 flex-direction:column;
 text-align:center;
 }
 
+.join-buttons{justify-content:center}
+
 .community-logo{
 width:100px;
 height:100px;
 }
-
-.join-buttons{justify-content:center}
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-<a class="brand" href="#">
-<img src="logo.jpg" alt="Fox Logo">
+
+<a href="#" class="brand">
+<img src="./logo.jpg" alt="Fox Logo">
 <div class="brand-name">
 <span>FOX</span> ANIME
 <small>W A L L P A P E R</small>
@@ -562,127 +650,231 @@ height:100px;
 </a>
 
 <nav>
-<a class="active" href="#"><i class="fa-solid fa-house"></i>Home</a>
+<a href="#"><i class="fa-solid fa-house"></i>Home</a>
 <a href="#anime"><i class="fa-solid fa-border-all"></i>Anime</a>
 <a href="#wallpapers"><i class="fa-regular fa-image"></i>Wallpapers</a>
 <a href="#community"><i class="fa-solid fa-users"></i>About</a>
 </nav>
 
 <div class="social">
-<a class="whatsapp" href="YOUR_WHATSAPP_LINK"><i class="fa-brands fa-whatsapp"></i></a>
-<a class="telegram" href="YOUR_TELEGRAM_LINK"><i class="fa-brands fa-telegram"></i></a>
+<a class="whatsapp" href="YOUR_WHATSAPP_LINK">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+<a class="telegram" href="YOUR_TELEGRAM_LINK">
+<i class="fa-brands fa-telegram"></i>
+</a>
 </div>
+
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
+
 <div class="hero-text">
-<div class="welcome"><span>//</span> WELCOME TO FOX ANIME</div>
+
+<div class="welcome">
+<span>//</span> WELCOME TO FOX ANIME
+</div>
 
 <h1>
 ANIME<br>
-<span class="orange">WALLPAPERS</span>
+<span>WALLPAPERS</span>
 </h1>
 
 <p>
 Your daily dose of HD and 4K anime wallpapers.<br>
-Explore your favourite anime characters.
+Discover your favourite anime characters and worlds.
 </p>
 
 <div class="actions">
-<a class="btn btn-orange" href="#wallpapers">
-<i class="fa-solid fa-play"></i> Explore Now →
+
+<a href="#anime" class="btn btn-orange">
+<i class="fa-solid fa-compass"></i>
+Explore Anime
 </a>
 
-<a class="btn btn-purple" href="#community">
-<i class="fa-solid fa-star"></i> Join Community
+<a href="#community" class="btn btn-purple">
+<i class="fa-solid fa-users"></i>
+Join Community
 </a>
+
 </div>
 </div>
 
-<img class="hero-character" src="Luffy.png" alt="Luffy Gear 5">
+<div class="hero-image">
+
+<img
+class="hero-character"
+src="./Luffy.png"
+alt="Luffy Gear 5"
+onerror="this.style.display='none';document.getElementById('imageError').style.display='block';"
+>
+
+<div class="image-error" id="imageError">
+Luffy.png not found. Check filename and folder.
+</div>
+
+</div>
+
 </section>
 
-<section class="section" id="anime">
-<div class="section-heading">
-<h2>ANIME <span>UNIVERSE</span></h2>
-<a class="view" href="#wallpapers">View All →</a>
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat">
+<strong>HD</strong>
+<span>High Quality</span>
 </div>
 
-<p class="subtitle">Explore your favourite worlds</p>
+<div class="stat">
+<strong>4K</strong>
+<span>Ultra Wallpapers</span>
+</div>
+
+<div class="stat">
+<strong>FOX</strong>
+<span>Anime Community</span>
+</div>
+
+</section>
+
+<!-- ANIME SECTION -->
+
+<section class="section" id="anime">
+
+<div class="heading">
+<h2>ANIME <span>UNIVERSE</span></h2>
+<a href="#wallpapers">Explore All →</a>
+</div>
+
+<p class="subtitle">
+Choose your favourite anime universe.
+</p>
 
 <div class="categories">
 
-<a class="category" href="#wallpapers">
-<img src="naruto-card.jpg" alt="Naruto">
+<a href="#wallpapers" class="category">
+<img src="./naruto-card.jpg" alt="Naruto">
 <strong>NARUTO</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
-<a class="category" href="#wallpapers">
-<img src="onepiece-card.jpg" alt="One Piece">
+<a href="#wallpapers" class="category">
+<img src="./onepiece-card.jpg" alt="One Piece">
 <strong>ONE PIECE</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
-<a class="category" href="#wallpapers">
-<img src="demonslayer-card.jpg" alt="Demon Slayer">
+<a href="#wallpapers" class="category">
+<img src="./demonslayer-card.jpg" alt="Demon Slayer">
 <strong>DEMON SLAYER</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
-<a class="category" href="#wallpapers">
-<img src="dragonball-card.jpg" alt="Dragon Ball">
+<a href="#wallpapers" class="category">
+<img src="./dragonball-card.jpg" alt="Dragon Ball">
 <strong>DRAGON BALL</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
-<a class="category" href="#wallpapers">
-<img src="jujutsu-card.jpg" alt="Jujutsu Kaisen">
+<a href="#wallpapers" class="category">
+<img src="./jujutsu-card.jpg" alt="Jujutsu Kaisen">
 <strong>JUJUTSU KAISEN</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
-<a class="category" href="#wallpapers">
-<img src="AOT-card.jpg" alt="Attack on Titan">
+<a href="#wallpapers" class="category">
+<img src="./AOT-card.jpg" alt="Attack on Titan">
 <strong>ATTACK ON TITAN</strong>
 <i class="fa-solid fa-circle-arrow-right"></i>
 </a>
 
 </div>
+
 </section>
 
-<section id="wallpapers" class="coming">
-<i class="fa-solid fa-images"></i>
-<h2>WALLPAPERS <span>COMING SOON</span></h2>
-<p>Our wallpaper collection is getting ready. Stay connected!</p>
+<!-- FEATURE -->
+
+<section class="feature">
+
+<h2>WELCOME TO <span>FOX WORLD</span></h2>
+
+<p>
+Explore amazing anime universes, discover your favourite characters
+and stay connected with the Fox Anime Wallpaper community.
+New collections are coming soon!
+</p>
+
+<a href="#community" class="btn btn-orange">
+Join Fox Community →
+</a>
+
 </section>
+
+<!-- WALLPAPERS -->
+
+<section class="wallpaper" id="wallpapers">
+
+<i class="fa-solid fa-images"></i>
+
+<h2>
+WALLPAPERS <span>COMING SOON</span>
+</h2>
+
+<p>
+Our HD and 4K wallpaper collection is getting ready.
+Stay connected for updates!
+</p>
+
+</section>
+
+<!-- COMMUNITY -->
 
 <section class="community" id="community">
+
 <div>
+
 <h2>JOIN THE <span>FOX COMMUNITY</span></h2>
-<p>Get fresh anime wallpapers, updates and more!</p>
+
+<p>
+Get fresh anime wallpapers, updates and exclusive collections!
+</p>
 
 <div class="join-buttons">
-<a class="btn join-wa" href="YOUR_WHATSAPP_LINK">
-<i class="fa-brands fa-whatsapp"></i> WhatsApp Channel →
+
+<a href="YOUR_WHATSAPP_LINK" class="btn join-wa">
+<i class="fa-brands fa-whatsapp"></i>
+WhatsApp Channel
 </a>
 
-<a class="btn join-tg" href="YOUR_TELEGRAM_LINK">
-<i class="fa-brands fa-telegram"></i> Telegram Channel →
+<a href="YOUR_TELEGRAM_LINK" class="btn join-tg">
+<i class="fa-brands fa-telegram"></i>
+Telegram Channel
 </a>
-</div>
+
 </div>
 
-<img class="community-logo" src="logo.jpg" alt="Fox Logo">
+</div>
+
+<img src="./logo.jpg" class="community-logo" alt="Fox Logo">
+
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-<a class="brand" href="#">
-<img src="logo.jpg" alt="Fox Logo">
+
+<a href="#" class="brand">
+
+<img src="./logo.jpg" alt="Fox Logo">
+
 <div class="brand-name">
 <span>FOX</span> ANIME
 <small>W A L L P A P E R</small>
 </div>
+
 </a>
 
 <div class="copyright">
@@ -691,11 +883,19 @@ Made for Anime Lovers © 2026
 </div>
 
 <div class="social">
-<a class="whatsapp" href="YOUR_WHATSAPP_LINK"><i class="fa-brands fa-whatsapp"></i></a>
-<a class="telegram" href="YOUR_TELEGRAM_LINK"><i class="fa-brands fa-telegram"></i></a>
+
+<a class="whatsapp" href="YOUR_WHATSAPP_LINK">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a class="telegram" href="YOUR_TELEGRAM_LINK">
+<i class="fa-brands fa-telegram"></i>
+</a>
+
 </div>
+
 </footer>
 
 </body>
-                   </html>
-                   
+</html>
+
