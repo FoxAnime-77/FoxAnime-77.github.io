@@ -133,9 +133,10 @@ nav a.active {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    font-size: 17px;
+    font-size: 16px;
     border: 1px solid #51415d;
     transition: .3s;
+    color: white;
 }
 
 .social-circle:hover {
@@ -162,7 +163,7 @@ nav a.active {
 /* HERO */
 
 .hero {
-    min-height: 470px;
+    min-height: 480px;
     padding: 65px 7%;
     display: flex;
     align-items: center;
@@ -170,21 +171,21 @@ nav a.active {
     overflow: hidden;
     border-bottom: 2px solid var(--purple);
     background:
-        linear-gradient(90deg, #08060df5 0%, #08060dc9 45%, #08060d30 100%),
+        linear-gradient(90deg, #08060df5 0%, #08060dc9 60%, #08060d60 100%),
         url("hero-bg.jpg") center/cover no-repeat;
 }
 
 .hero-content {
-    max-width: 590px;
+    max-width: 550px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-tag {
     color: #f5dfff;
     font-size: 12px;
     letter-spacing: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .hero-tag::before {
@@ -196,26 +197,26 @@ nav a.active {
 }
 
 .hero h1 {
-    font-size: clamp(42px, 6vw, 76px);
+    font-size: clamp(38px, 5.5vw, 68px);
     font-weight: 900;
-    line-height: 1.06;
+    line-height: 1.1;
     font-style: italic;
     text-shadow: 0 5px 20px #000;
 }
 
 .hero h1 span {
     color: var(--orange);
-    display: block;
     font-family: 'Permanent Marker', cursive;
     font-weight: 400;
+    display: inline-block;
 }
 
 .hero p {
     color: #e2dce8;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.8;
-    margin: 20px 0 27px;
-    max-width: 470px;
+    margin: 15px 0 25px;
+    max-width: 440px;
 }
 
 .hero-buttons {
@@ -226,7 +227,7 @@ nav a.active {
 
 .main-btn,
 .outline-btn {
-    padding: 13px 23px;
+    padding: 12px 22px;
     border-radius: 35px;
     font-size: 13px;
     font-weight: 800;
@@ -243,6 +244,7 @@ nav a.active {
 .outline-btn {
     border: 2px solid var(--purple);
     color: #e5a4ff;
+    background: rgba(176, 0, 255, 0.08);
 }
 
 .main-btn:hover,
@@ -254,21 +256,21 @@ nav a.active {
 /* LUFFY FLOATING ANIMATION */
 @keyframes floatAnime {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-12px); }
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
 
 .hero-character {
     position: absolute;
-    width: 35%;
-    max-width: 390px;
-    height: 95%;
-    right: 7%;
+    width: 320px;
+    max-width: 40%;
+    height: auto;
+    right: 5%;
     bottom: 0;
     object-fit: contain;
-    object-position: bottom;
-    filter: drop-shadow(0 0 25px #ff790044);
+    filter: drop-shadow(0 0 25px #ff790055);
     animation: floatAnime 4s ease-in-out infinite;
+    z-index: 2;
 }
 
 /* STATS */
@@ -404,8 +406,7 @@ section {
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-    background:
-        linear-gradient(100deg, #1a1027, #0b0911);
+    background: linear-gradient(100deg, #1a1027, #0b0911);
     border-top: 1px solid #53266d;
     border-bottom: 1px solid #53266d;
 }
@@ -593,16 +594,6 @@ section {
     line-height: 1.8;
 }
 
-.retry-btn {
-    background: var(--orange);
-    color: #160a00;
-    border: 0;
-    border-radius: 25px;
-    padding: 10px 22px;
-    margin-top: 15px;
-    font-weight: 800;
-}
-
 /* COMMUNITY */
 
 .community {
@@ -738,32 +729,29 @@ footer strong {
     }
 
     .hero {
-        min-height: 430px;
-        padding: 50px 6%;
-        background-position: center;
+        min-height: 400px;
+        padding: 40px 5%;
     }
 
     .hero-content {
         max-width: 100%;
+        z-index: 4;
     }
 
     .hero h1 {
-        font-size: 47px;
+        font-size: 40px;
     }
 
     .hero p {
         font-size: 12px;
-        max-width: 300px;
+        max-width: 260px;
     }
 
     .hero-character {
-        width: 45%;
-        right: -5%;
-        opacity: .42;
-    }
-
-    .hero-content {
-        z-index: 3;
+        width: 180px;
+        right: -10px;
+        bottom: 0;
+        opacity: 0.9;
     }
 
     .stats {
@@ -841,20 +829,6 @@ footer strong {
         font-size: 24px;
     }
 }
-
-@media(max-width: 360px) {
-    .category-card {
-        height: 115px;
-    }
-
-    .wallpaper-card img {
-        height: 160px;
-    }
-
-    .hero h1 {
-        font-size: 39px;
-    }
-}
 </style>
 </head>
 
@@ -879,8 +853,13 @@ footer strong {
     </nav>
 
     <div class="header-social">
-        <a class="social-circle whatsapp-circle" href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k" target="_blank">◉</a>
-        <a class="social-circle telegram-circle" href="https://t.me/fox_anime_wallpaper77" target="_blank">➤</a>
+        <!-- Proper WhatsApp & Telegram Icons -->
+        <a class="social-circle whatsapp-circle" href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k" target="_blank" title="WhatsApp">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </a>
+        <a class="social-circle telegram-circle" href="https://t.me/fox_anime_wallpaper77" target="_blank" title="Telegram">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.943z"/></svg>
+        </a>
     </div>
 </header>
 
@@ -933,37 +912,30 @@ footer strong {
     </div>
 
     <div class="categories">
-
         <div class="category-card" onclick="filterWallpapers('naruto')">
             <img src="naruto-card.png" alt="Naruto">
             <div class="category-name">NARUTO</div>
         </div>
-
         <div class="category-card" onclick="filterWallpapers('onepiece')">
             <img src="onepiece-card.png" alt="One Piece">
             <div class="category-name">ONE PIECE</div>
         </div>
-
         <div class="category-card" onclick="filterWallpapers('demonslayer')">
             <img src="demonslayer-card.png" alt="Demon Slayer">
             <div class="category-name">DEMON SLAYER</div>
         </div>
-
         <div class="category-card" onclick="filterWallpapers('dragonball')">
             <img src="dragonball-card.png" alt="Dragon Ball">
             <div class="category-name">DRAGON BALL</div>
         </div>
-
         <div class="category-card" onclick="filterWallpapers('jujutsu')">
             <img src="jujutsu-card.png" alt="Jujutsu Kaisen">
             <div class="category-name">JUJUTSU KAISEN</div>
         </div>
-
         <div class="category-card" onclick="filterWallpapers('aot')">
             <img src="AOT-card.png" alt="Attack on Titan">
             <div class="category-name">ATTACK ON TITAN</div>
         </div>
-
     </div>
 </section>
 
@@ -984,7 +956,6 @@ footer strong {
 <!-- WALLPAPERS -->
 
 <section id="wallpapers">
-
     <div class="gallery-heading">
         <div>
             <h2 class="section-title">LATEST <span>WALLPAPERS</span></h2>
@@ -999,32 +970,4 @@ footer strong {
 
     <div class="gallery-tools">
         <button class="filter-btn active" data-category="all" onclick="filterWallpapers('all')">All</button>
-        <button class="filter-btn" data-category="naruto" onclick="filterWallpapers('naruto')">Naruto</button>
-        <button class="filter-btn" data-category="onepiece" onclick="filterWallpapers('onepiece')">One Piece</button>
-        <button class="filter-btn" data-category="demonslayer" onclick="filterWallpapers('demonslayer')">Demon Slayer</button>
-        <button class="filter-btn" data-category="dragonball" onclick="filterWallpapers('dragonball')">Dragon Ball</button>
-        <button class="filter-btn" data-category="jujutsu" onclick="filterWallpapers('jujutsu')">Jujutsu Kaisen</button>
-        <button class="filter-btn" data-category="aot" onclick="filterWallpapers('aot')">Attack on Titan</button>
-    </div>
-
-    <div class="wallpaper-gallery" id="wallpaper-gallery">
-        <div class="gallery-message">Loading Wallpapers...</div>
-    </div>
-
-</section>
-
-<!-- COMMUNITY -->
-
-<section class="community" id="community">
-    <h2>JOIN THE <span>FOX COMMUNITY</span></h2>
-    <p>Get fresh anime wallpapers, updates and more!</p>
-
-    <div class="social-links">
-        <a class="whatsapp" href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k" target="_blank">◉ Join WhatsApp Channel →</a>
-        <a class="telegram" href="https://t.me/fox_anime_wallpaper77" target="_blank">➤ Join Telegram Channel →</a>
-    </div>
-</section>
-
-<footer>
-    <div><strong>FOX ANIME WALLPAPER</strong></div>
-    <di    
+        <button class="filter-btn" data-category="naruto" onclick="filterWallpapers('naruto')">Narut    
