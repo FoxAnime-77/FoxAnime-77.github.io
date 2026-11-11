@@ -4,22 +4,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#08060d">
-
 <title>FOX ANIME WALLPAPER</title>
-<meta name="description" content="Explore and download HD and 4K anime wallpapers for free.">
+<meta name="description" content="Explore HD and 4K anime wallpapers at Fox Anime Wallpaper.">
 
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root {
     --orange: #ff7900;
-    --purple: #a020ff;
-    --pink: #e83cff;
+    --purple: #b000ff;
+    --pink: #ed35e8;
     --bg: #08060d;
-    --card: #15111d;
-    --white: #ffffff;
-    --muted: #aaa3b5;
+    --panel: #110d19;
+    --text: #ffffff;
+    --muted: #b5acbf;
 }
 
 * {
@@ -34,33 +32,23 @@ html {
 }
 
 body {
-    background: var(--bg);
-    color: var(--white);
+    background:
+        radial-gradient(ellipse at 10% 45%, #29102c55, transparent 35%),
+        radial-gradient(ellipse at 90% 80%, #35130044, transparent 35%),
+        var(--bg);
+    color: var(--text);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-}
-
-button, input {
-    font-family: inherit;
+    color: inherit;
 }
 
 button {
+    font-family: inherit;
     cursor: pointer;
-}
-
-img {
-    max-width: 100%;
-}
-
-.container {
-    width: 92%;
-    max-width: 1450px;
-    margin: auto;
 }
 
 /* HEADER */
@@ -69,42 +57,36 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: rgba(8,6,13,.96);
-    backdrop-filter: blur(15px);
-    border-bottom: 2px solid transparent;
-    border-image: linear-gradient(90deg,var(--orange),var(--purple),var(--orange)) 1;
-}
-
-.header-inner {
-    min-height: 92px;
-    width: 94%;
-    max-width: 1500px;
-    margin: auto;
+    min-height: 82px;
+    padding: 10px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    background: rgba(8,6,13,.96);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid #9c25d5;
+    box-shadow: 0 5px 25px #0008;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
-    min-width: 210px;
+    flex-shrink: 0;
 }
 
 .logo img {
-    width: 67px;
-    height: 67px;
-    object-fit: cover;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
+    object-fit: cover;
     border: 2px solid var(--orange);
-    box-shadow: 0 0 15px #ff790044;
-    background: #100b16;
+    box-shadow: 0 0 15px #ff790055;
 }
 
 .logo-text {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 900;
     font-style: italic;
     line-height: 1;
@@ -115,26 +97,25 @@ header {
     color: var(--orange);
 }
 
-.logo-sub {
+.logo-text small {
     display: block;
     font-size: 9px;
     letter-spacing: 5px;
     color: #ddd;
-    margin-top: 6px;
     text-align: center;
+    margin-top: 6px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 34px;
+    gap: 30px;
 }
 
 nav a {
+    color: #d5cfdd;
     font-size: 13px;
-    color: #ddd;
-    transition: .3s;
-    position: relative;
+    transition: .25s;
 }
 
 nav a:hover,
@@ -142,201 +123,145 @@ nav a.active {
     color: var(--orange);
 }
 
-nav a.active::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background: var(--orange);
-    bottom: -15px;
-    left: 0;
-    box-shadow: 0 0 12px var(--orange);
-}
-
 .header-social {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
-.social-icon {
-    width: 43px;
-    height: 43px;
+.social-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     display: grid;
     place-items: center;
-    border-radius: 50%;
-    font-size: 19px;
-    font-weight: 800;
-    border: 1px solid #42334d;
-    background: #100d17;
+    font-size: 17px;
+    border: 1px solid #51415d;
     transition: .3s;
 }
 
-.social-icon:hover {
+.social-circle:hover {
     transform: translateY(-4px);
-    box-shadow: 0 0 18px #a020ff66;
+    box-shadow: 0 0 15px #b000ff66;
 }
 
-.social-icon.whatsapp-icon {
-    border-color: #20cf65;
-    color: #20cf65;
+.whatsapp-circle {
+    background: #087d35;
 }
 
-.social-icon.telegram-icon {
-    border-color: #159cde;
-    color: #159cde;
+.telegram-circle {
+    background: #087bb9;
 }
 
 .menu-btn {
     display: none;
-    border: 1px solid #493454;
     color: white;
-    background: #17101f;
-    border-radius: 8px;
-    padding: 8px 13px;
-    font-size: 23px;
+    background: transparent;
+    border: 0;
+    font-size: 28px;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 510px;
-    position: relative;
-    overflow: hidden;
+    min-height: 470px;
+    padding: 65px 7%;
     display: flex;
     align-items: center;
-    background:
-        linear-gradient(90deg,#08060d 5%,rgba(8,6,13,.92) 38%,rgba(8,6,13,.28) 100%),
-        url("hero-bg.jpg") center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
     border-bottom: 2px solid var(--purple);
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(0deg,#08060d66,transparent 45%);
-    pointer-events: none;
+    background:
+        linear-gradient(90deg, #08060df5 0%, #08060dc9 45%, #08060d30 100%),
+        url("hero-bg.jpg") center/cover no-repeat;
 }
 
 .hero-content {
+    max-width: 590px;
     position: relative;
-    z-index: 3;
-    width: 55%;
-    max-width: 720px;
-    margin-left: 7%;
-    padding: 55px 0;
+    z-index: 2;
 }
 
 .hero-tag {
     color: #f5dfff;
-    letter-spacing: 4px;
     font-size: 12px;
-    margin-bottom: 22px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
 }
 
-.hero-tag span {
+.hero-tag::before {
+    content: "//";
     color: var(--purple);
     font-size: 22px;
     font-weight: 900;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
 .hero h1 {
-    font-size: clamp(48px,7vw,88px);
-    line-height: 1.02;
+    font-size: clamp(42px, 6vw, 76px);
     font-weight: 900;
+    line-height: 1.06;
     font-style: italic;
-    letter-spacing: -3px;
+    text-shadow: 0 5px 20px #000;
 }
 
-.hero h1 .line-one {
-    display: block;
-    color: #fff;
-    font-family: 'Permanent Marker', cursive;
-}
-
-.hero h1 .line-two {
-    display: block;
+.hero h1 span {
     color: var(--orange);
+    display: block;
     font-family: 'Permanent Marker', cursive;
-    text-shadow: 0 0 25px #ff790044;
+    font-weight: 400;
 }
 
-.hero-description {
-    max-width: 490px;
-    color: #e0dce5;
-    line-height: 1.9;
+.hero p {
+    color: #e2dce8;
     font-size: 15px;
-    margin: 22px 0 28px;
+    line-height: 1.8;
+    margin: 20px 0 27px;
+    max-width: 470px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
-.main-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 14px 26px;
+.main-btn,
+.outline-btn {
+    padding: 13px 23px;
     border-radius: 35px;
-    background: linear-gradient(100deg,#ff7900,#ff4b16);
-    color: #120900;
     font-size: 13px;
-    font-weight: 900;
-    box-shadow: 0 0 22px #ff790044;
+    font-weight: 800;
+    display: inline-block;
     transition: .3s;
 }
 
-.main-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 30px #ff790088;
+.main-btn {
+    background: linear-gradient(100deg, #ff7900, #ff4b13);
+    color: #120900;
+    box-shadow: 0 0 20px #ff790044;
 }
 
 .outline-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 13px 26px;
-    border-radius: 35px;
     border: 2px solid var(--purple);
-    color: #dcaaff;
-    font-size: 13px;
-    font-weight: 800;
-    transition: .3s;
+    color: #e5a4ff;
 }
 
+.main-btn:hover,
 .outline-btn:hover {
-    background: var(--purple);
-    color: white;
-    box-shadow: 0 0 22px #a020ff77;
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px #b000ff55;
 }
 
 .hero-character {
     position: absolute;
-    z-index: 2;
-    right: 4%;
+    width: 35%;
+    max-width: 390px;
+    height: 95%;
+    right: 7%;
     bottom: 0;
-    width: 39%;
-    max-width: 520px;
-    height: 96%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    pointer-events: none;
-}
-
-.hero-character img {
-    width: 100%;
-    height: 100%;
     object-fit: contain;
     object-position: bottom;
-    filter: drop-shadow(0 0 25px #a020ff55);
+    filter: drop-shadow(0 0 25px #ff790044);
 }
 
 /* STATS */
@@ -344,80 +269,84 @@ nav a.active::after {
 .stats {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    background: #100c17;
-    border-bottom: 1px solid #35233e;
-    border-top: 1px solid #35233e;
     padding: 22px 8%;
+    background: #100c17;
+    border-bottom: 1px solid #302039;
 }
 
 .stat {
     text-align: center;
-    border-right: 1px solid #392b45;
+    border-right: 1px solid #34233e;
 }
 
 .stat:last-child {
-    border: none;
+    border: 0;
 }
 
 .stat h2 {
+    font-size: 25px;
     color: var(--orange);
-    font-size: 27px;
-    font-weight: 900;
 }
 
 .stat p {
-    color: #aaa;
+    color: var(--muted);
     font-size: 11px;
 }
 
-/* SECTION HEADINGS */
+/* GENERAL SECTIONS */
 
 section {
-    padding: 65px 0;
+    padding: 55px 5%;
 }
 
-.section-heading {
-    margin-bottom: 30px;
+.section-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
-.section-heading h2 {
-    font-size: clamp(25px,3.5vw,37px);
+.section-title {
+    font-size: clamp(23px, 3vw, 32px);
     font-weight: 900;
     font-style: italic;
-    text-transform: uppercase;
+    line-height: 1.2;
 }
 
-.section-heading h2 span {
+.section-title span {
     color: var(--orange);
 }
 
-.section-heading p {
+.section-subtitle {
     color: var(--muted);
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 5px;
 }
 
-.heading-line {
-    border-left: 7px solid var(--purple);
-    padding-left: 18px;
+.view-all {
+    color: #d64cff;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
-/* CATEGORIES */
+/* ANIME CATEGORIES */
 
 .categories {
     display: grid;
-    grid-template-columns: repeat(6,minmax(0,1fr));
-    gap: 16px;
+    grid-template-columns: repeat(6,1fr);
+    gap: 15px;
 }
 
 .category-card {
-    height: 205px;
+    height: 195px;
     position: relative;
     overflow: hidden;
-    border-radius: 13px;
+    border-radius: 14px;
+    border: 1px solid #7130a1;
+    background: #1a1123;
     cursor: pointer;
-    background: #17111f;
-    border: 1px solid #7134a0;
     transition: .3s;
 }
 
@@ -427,7 +356,7 @@ section {
 
 .category-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 0 24px #a020ff55;
+    box-shadow: 0 8px 25px #b000ff44;
 }
 
 .category-card img {
@@ -445,66 +374,43 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg,#08060df5 0%,transparent 75%);
+    background: linear-gradient(0deg, #08060df5, transparent 75%);
 }
 
 .category-name {
     position: absolute;
-    bottom: 15px;
-    left: 8px;
-    right: 8px;
+    bottom: 13px;
+    left: 5px;
+    right: 5px;
     z-index: 2;
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 900;
     font-style: italic;
-    text-shadow: 0 2px 8px black;
+    text-shadow: 0 2px 5px #000;
 }
 
-.category-arrow {
-    position: absolute;
-    z-index: 3;
-    bottom: 12px;
-    right: 9px;
-    width: 23px;
-    height: 23px;
-    display: grid;
-    place-items: center;
-    border: 1px solid var(--orange);
-    color: var(--orange);
-    border-radius: 50%;
-    font-size: 12px;
-}
-
-/* FEATURE BANNER */
+/* FEATURE */
 
 .feature {
-    position: relative;
-    overflow: hidden;
-    background:
-        linear-gradient(90deg,#100b19 0%,rgba(16,11,25,.92) 55%,rgba(16,11,25,.4)),
-        url("hero-bg.jpg") center/cover;
-    border-top: 1px solid var(--purple);
-    border-bottom: 1px solid var(--orange);
-}
-
-.feature-inner {
-    min-height: 250px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-    padding: 30px 5%;
+    background:
+        linear-gradient(100deg, #1a1027, #0b0911);
+    border-top: 1px solid #53266d;
+    border-bottom: 1px solid #53266d;
 }
 
 .feature-content {
-    max-width: 650px;
+    max-width: 600px;
 }
 
 .feature h2 {
-    font-size: clamp(25px,4vw,38px);
-    font-weight: 900;
+    font-size: 30px;
     font-style: italic;
+    font-weight: 900;
 }
 
 .feature h2 span {
@@ -512,90 +418,75 @@ section {
 }
 
 .feature p {
-    color: #c4bdcd;
-    font-size: 14px;
+    color: #c2b8cc;
+    font-size: 13px;
     line-height: 1.9;
     margin-top: 12px;
 }
 
 .feature img {
-    width: 220px;
-    height: 220px;
+    width: 190px;
+    max-height: 210px;
     object-fit: contain;
-    filter: drop-shadow(0 0 22px #a020ff55);
 }
 
 /* WALLPAPER GALLERY */
 
 #wallpapers {
-    scroll-margin-top: 105px;
+    scroll-margin-top: 95px;
 }
 
-.gallery-top {
+.gallery-heading {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 24px;
-}
-
-.gallery-top .section-heading {
-    margin: 0;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .search-box {
+    width: min(360px, 100%);
     display: flex;
     align-items: center;
     gap: 10px;
-    width: min(420px,100%);
-    background: #15121b;
-    border: 1px solid #51435c;
+    padding: 12px 15px;
+    border: 1px solid #51405d;
     border-radius: 35px;
-    padding: 12px 17px;
-}
-
-.search-box span {
-    font-size: 20px;
-    color: #ddd;
+    background: #15111c;
 }
 
 .search-box input {
+    width: 100%;
     background: transparent;
-    border: none;
+    border: 0;
     outline: none;
     color: white;
-    width: 100%;
-    font-size: 13px;
-}
-
-.search-box input::placeholder {
-    color: #aaa;
+    font-family: inherit;
+    font-size: 12px;
 }
 
 .gallery-tools {
     display: flex;
-    align-items: center;
-    gap: 9px;
     flex-wrap: wrap;
-    margin-bottom: 28px;
+    gap: 9px;
+    margin: 20px 0 25px;
 }
 
 .filter-btn {
-    padding: 9px 17px;
-    border: 1px solid #403047;
-    background: #15111c;
-    color: #c9c2d1;
-    border-radius: 25px;
+    border: 1px solid #483653;
+    color: #d7cddd;
+    background: #17111f;
+    padding: 9px 15px;
+    border-radius: 30px;
     font-size: 11px;
     transition: .25s;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
-    background: linear-gradient(100deg,#a020ff,#d020ff);
+    background: linear-gradient(100deg, #a900ed, #d12aff);
+    border-color: #d12aff;
     color: white;
-    border-color: var(--purple);
-    box-shadow: 0 0 15px #a020ff55;
 }
 
 .wallpaper-gallery {
@@ -605,34 +496,33 @@ section {
 }
 
 .wallpaper-card {
-    position: relative;
     min-width: 0;
-    overflow: hidden;
     padding: 8px;
+    background: linear-gradient(145deg,#21152d,#100d17);
+    border: 1px solid #55316d;
     border-radius: 14px;
-    background: linear-gradient(145deg,#24162f,#100d17);
-    border: 1px solid #604070;
-    box-shadow: 0 0 16px #a020ff16;
+    overflow: hidden;
     transition: .3s;
+    box-shadow: 0 5px 18px #0005;
 }
 
 .wallpaper-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
     border-color: var(--orange);
-    box-shadow: 0 0 25px #ff790044;
+    box-shadow: 0 0 22px #ff790033;
 }
 
 .wallpaper-image-wrap {
     position: relative;
     overflow: hidden;
     border-radius: 9px;
-    background: #0b0910;
+    background: #0b0810;
 }
 
 .wallpaper-card img {
+    display: block;
     width: 100%;
     height: 255px;
-    display: block;
     object-fit: cover;
     transition: .4s;
 }
@@ -645,63 +535,64 @@ section {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: var(--purple);
-    padding: 4px 9px;
+    background: #8c20e9;
+    padding: 5px 9px;
     border-radius: 20px;
     font-size: 10px;
     font-weight: 800;
 }
 
+.wallpaper-name {
+    font-size: 11px;
+    color: #ddd;
+    padding: 9px 3px 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .wallpaper-actions {
     display: flex;
     gap: 8px;
-    margin-top: 10px;
+    margin-top: 8px;
 }
 
 .wallpaper-actions a {
     flex: 1;
     text-align: center;
-    padding: 10px 5px;
+    padding: 9px 4px;
     border-radius: 7px;
     font-size: 10px;
     font-weight: 800;
-    transition: .2s;
 }
 
 .preview-btn {
-    background: #352440;
+    background: #30213e;
     color: white;
 }
 
 .download-btn {
     background: var(--orange);
-    color: #140a00;
-}
-
-.preview-btn:hover,
-.download-btn:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.15);
+    color: #150a00;
 }
 
 .gallery-message {
     grid-column: 1/-1;
-    text-align: center;
-    color: #bbb;
     padding: 45px 15px;
-    line-height: 1.8;
+    text-align: center;
+    color: #c7bbd0;
     font-size: 13px;
+    line-height: 1.8;
 }
 
 .retry-btn {
-    display: inline-block;
-    margin-top: 15px;
-    border: none;
+    background: var(--orange);
+    color: #160a00;
+    border: 0;
     border-radius: 25px;
     padding: 10px 22px;
-    background: var(--orange);
-    color: #111;
-    font-weight: 900;
+    margin-top: 15px;
+    font-weight: 800;
 }
 
 /* COMMUNITY */
@@ -709,24 +600,14 @@ section {
 .community {
     position: relative;
     overflow: hidden;
-    background:
-        linear-gradient(90deg,#100b19 0%,rgba(16,11,25,.94) 55%,rgba(16,11,25,.65)),
-        url("hero-bg.jpg") center/cover;
-    border-top: 2px solid var(--purple);
+    text-align: center;
+    background: linear-gradient(110deg,#1d102b,#100b18);
+    border-top: 1px solid #8e2ac3;
     border-bottom: 2px solid var(--orange);
 }
 
-.community-inner {
-    min-height: 230px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 35px 5%;
-}
-
 .community h2 {
-    font-size: clamp(26px,4vw,39px);
+    font-size: 30px;
     font-weight: 900;
     font-style: italic;
 }
@@ -736,22 +617,20 @@ section {
 }
 
 .community p {
-    color: #ccc;
-    margin: 10px 0 23px;
-    font-size: 14px;
+    color: #c6bbd0;
+    margin: 10px 0 24px;
+    font-size: 13px;
 }
 
 .social-links {
     display: flex;
-    gap: 13px;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 13px;
 }
 
 .social-links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 13px 22px;
+    padding: 13px 23px;
     border-radius: 30px;
     font-size: 12px;
     font-weight: 800;
@@ -763,116 +642,47 @@ section {
 }
 
 .whatsapp {
-    background: #16b83f;
-    color: white;
-    box-shadow: 0 0 18px #16b83f44;
+    background: #0cae42;
 }
 
 .telegram {
-    background: #168bd0;
-    color: white;
-    box-shadow: 0 0 18px #168bd044;
-}
-
-.community-art {
-    width: 230px;
-    height: 210px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 25px #a020ff66);
+    background: #087ebc;
 }
 
 /* FOOTER */
 
 footer {
-    padding: 28px 5%;
-    background: #07060b;
-}
-
-.footer-inner {
+    padding: 25px 5%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.footer-logo {
-    display: flex;
     align-items: center;
-    gap: 12px;
-}
-
-.footer-logo img {
-    width: 55px;
-    height: 55px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--orange);
-}
-
-.footer-logo strong {
-    font-size: 21px;
-    font-style: italic;
-}
-
-.footer-logo strong span {
-    color: var(--orange);
-}
-
-.footer-links {
-    display: flex;
-    gap: 18px;
-    color: #bbb;
-    font-size: 12px;
-}
-
-.footer-links a:hover {
-    color: var(--orange);
-}
-
-.copyright {
-    color: #777;
+    gap: 15px;
+    flex-wrap: wrap;
+    color: #a79bab;
     font-size: 11px;
-    text-align: center;
-    margin-top: 22px;
+}
+
+footer strong {
+    color: var(--orange);
 }
 
 /* MOBILE */
 
-@media(max-width:1000px) {
-    .header-inner {
-        min-height: 75px;
-    }
-
-    .logo {
-        min-width: auto;
-    }
-
-    .logo img {
-        width: 55px;
-        height: 55px;
-    }
-
-    .logo-text {
-        font-size: 20px;
+@media(max-width: 900px) {
+    header {
+        padding: 10px 4%;
     }
 
     nav {
-        gap: 18px;
+        gap: 15px;
     }
 
     .header-social {
-        gap: 7px;
-    }
-
-    .social-icon {
-        width: 36px;
-        height: 36px;
-        font-size: 15px;
+        display: none;
     }
 
     .categories {
-        grid-template-columns: repeat(3,minmax(0,1fr));
+        grid-template-columns: repeat(3,1fr);
     }
 
     .wallpaper-gallery {
@@ -880,22 +690,21 @@ footer {
     }
 }
 
-@media(max-width:700px) {
-    .header-inner {
-        width: 92%;
-        min-height: 72px;
+@media(max-width: 600px) {
+    header {
+        min-height: 68px;
     }
 
     .logo img {
-        width: 48px;
-        height: 48px;
+        width: 44px;
+        height: 44px;
     }
 
     .logo-text {
         font-size: 18px;
     }
 
-    .logo-sub {
+    .logo-text small {
         font-size: 7px;
         letter-spacing: 3px;
     }
@@ -907,95 +716,75 @@ footer {
     nav {
         display: none;
         position: absolute;
-        top: 72px;
+        top: 68px;
         left: 0;
-        width: 100%;
+        right: 0;
+        background: #100b18;
         padding: 20px;
-        background: #100c17;
-        border-bottom: 1px solid var(--purple);
         flex-direction: column;
-        align-items: stretch;
-        gap: 0;
+        border-bottom: 1px solid var(--purple);
     }
 
     nav.show {
         display: flex;
     }
 
-    nav a {
-        padding: 12px 8px;
-        border-bottom: 1px solid #2c2135;
-    }
-
-    nav a.active::after {
-        display: none;
-    }
-
-    .header-social {
-        display: none;
-    }
-
     .hero {
-        min-height: 470px;
+        min-height: 430px;
+        padding: 50px 6%;
         background-position: center;
     }
 
     .hero-content {
-        width: 72%;
-        margin-left: 5%;
-        padding: 50px 0;
+        max-width: 100%;
     }
 
     .hero h1 {
-        font-size: clamp(39px,8vw,60px);
-        letter-spacing: -2px;
+        font-size: 47px;
     }
 
-    .hero-description {
+    .hero p {
         font-size: 12px;
-        max-width: 340px;
+        max-width: 300px;
     }
 
     .hero-character {
-        right: -8%;
         width: 45%;
-        height: 85%;
-        opacity: .9;
+        right: -5%;
+        opacity: .42;
     }
 
-    .main-btn,
-    .outline-btn {
-        padding: 11px 16px;
-        font-size: 11px;
+    .hero-content {
+        z-index: 3;
+    }
+
+    .stats {
+        padding: 18px 3%;
+    }
+
+    .stat h2 {
+        font-size: 21px;
     }
 
     section {
-        padding: 48px 0;
+        padding: 42px 4%;
     }
 
     .categories {
         grid-template-columns: repeat(3,minmax(0,1fr));
-        gap: 11px;
+        gap: 9px;
     }
 
     .category-card {
-        height: 145px;
+        height: 135px;
     }
 
     .category-name {
-        font-size: 10px;
-        bottom: 12px;
+        font-size: 9px;
+        bottom: 9px;
     }
 
-    .category-arrow {
-        width: 19px;
-        height: 19px;
-        font-size: 10px;
-        bottom: 8px;
-        right: 6px;
-    }
-
-    .gallery-top {
+    .gallery-heading {
         align-items: flex-start;
         flex-direction: column;
     }
@@ -1004,124 +793,58 @@ footer {
         width: 100%;
     }
 
+    .gallery-tools {
+        gap: 7px;
+    }
+
+    .filter-btn {
+        padding: 8px 11px;
+        font-size: 10px;
+    }
+
     .wallpaper-gallery {
         grid-template-columns: repeat(2,minmax(0,1fr));
         gap: 12px;
     }
 
+    .wallpaper-card {
+        padding: 6px;
+    }
+
     .wallpaper-card img {
-        height: 205px;
+        height: 190px;
     }
 
     .wallpaper-actions a {
         font-size: 9px;
-        padding: 9px 3px;
+        padding: 9px 2px;
     }
 
-    .feature-inner,
-    .community-inner {
-        min-height: 0;
-        padding: 30px 3%;
+    .feature {
+        text-align: center;
+        flex-direction: column;
     }
 
-    .feature img,
-    .community-art {
-        width: 145px;
-        height: 160px;
+    .feature img {
+        width: 150px;
     }
 
     .community h2 {
-        font-size: 25px;
-    }
-
-    .community p {
-        font-size: 12px;
-    }
-
-    .social-links a {
-        padding: 11px 14px;
-        font-size: 10px;
+        font-size: 24px;
     }
 }
 
-@media(max-width:420px) {
-    .hero {
-        min-height: 420px;
-    }
-
-    .hero-content {
-        width: 80%;
-    }
-
-    .hero-character {
-        right: -16%;
-        width: 49%;
-        opacity: .7;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero-tag {
-        font-size: 9px;
-        letter-spacing: 2px;
-    }
-
-    .stats {
-        padding: 18px 3%;
-    }
-
-    .stat h2 {
-        font-size: 22px;
-    }
-
-    .stat p {
-        font-size: 9px;
-    }
-
+@media(max-width: 360px) {
     .category-card {
-        height: 120px;
-    }
-
-    .wallpaper-card {
-        padding: 5px;
+        height: 115px;
     }
 
     .wallpaper-card img {
-        height: 175px;
+        height: 160px;
     }
 
-    .quality-tag {
-        font-size: 8px;
-        top: 6px;
-        right: 6px;
-    }
-
-    .feature-inner,
-    .community-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .feature img,
-    .community-art {
-        width: 150px;
-        height: 140px;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .footer-inner {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .footer-links {
-        justify-content: center;
-        flex-wrap: wrap;
+    .hero h1 {
+        font-size: 39px;
     }
 }
 </style>
@@ -1129,39 +852,183 @@ footer {
 
 <body>
 
-<!-- HEADER -->
-
 <header>
-    <div class="header-inner">
-
-        <a href="#" class="logo">
-            <img src="logo.jpg" alt="FOX Anime Logo">
-            <div>
-                <div class="logo-text"><span>FOX</span> ANIME</div>
-                <span class="logo-sub">W A L L P A P E R</span>
-            </div>
-        </a>
-
-        <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
-
-        <nav id="navigation">
-            <a href="#" class="active" onclick="closeMenu()">⌂ Home</a>
-            <a href="#categories" onclick="closeMenu()">▦ Anime</a>
-            <a href="#wallpapers" onclick="closeMenu()">▧ Wallpapers</a>
-            <a href="#community" onclick="closeMenu()">ⓘ About</a>
-        </nav>
-
-        <div class="header-social">
-            <a class="social-icon whatsapp-icon" href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k" target="_blank" rel="noopener">◉</a>
-            <a class="social-icon telegram-icon" href="https://t.me/fox_anime_wallpaper77" target="_blank" rel="noopener">➤</a>
-            <a class="social-icon" href="#wallpapers">☾</a>
+    <a href="#" class="logo">
+        <img src="logo.jpg" alt="FOX Logo">
+        <div class="logo-text">
+            <span>FOX</span> ANIME
+            <small>W A L L P A P E R</small>
         </div>
+    </a>
 
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+
+    <nav id="navigation">
+        <a href="#" class="active">Home</a>
+        <a href="#categories">Anime</a>
+        <a href="#wallpapers">Wallpapers</a>
+        <a href="#community">About</a>
+    </nav>
+
+    <div class="header-social">
+        <a class="social-circle whatsapp-circle" href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k" target="_blank">◉</a>
+        <a class="social-circle telegram-circle" href="https://t.me/fox_anime_wallpaper77" target="_blank">➤</a>
     </div>
 </header>
 
 <!-- HERO -->
 
 <div class="hero">
+    <div class="hero-content">
+        <div class="hero-tag">WELCOME TO FOX ANIME</div>
+        <h1>Anime <span>Wallpapers</span></h1>
+        <p>
+            Your daily dose of HD and 4K anime wallpapers.
+            Explore your favourite anime characters.
+        </p>
 
+        <div class="hero-buttons">
+            <a href="#wallpapers" class="main-btn">▶ Explore Now →</a>
+            <a href="#community" class="outline-btn">★ Join Community</a>
+        </div>
+    </div>
+
+    <img class="hero-character" src="Luffy.png" alt="Luffy Anime Character">
+</div>
+
+<!-- STATS -->
+
+<div class="stats">
+    <div class="stat">
+        <h2>HD</h2>
+        <p>High Quality</p>
+    </div>
+    <div class="stat">
+        <h2>4K</h2>
+        <p>Ultra HD Wallpapers</p>
+    </div>
+    <div class="stat">
+        <h2>FREE</h2>
+        <p>Free Downloads</p>
+    </div>
+</div>
+
+<!-- CATEGORIES -->
+
+<section id="categories">
+    <div class="section-top">
+        <div>
+            <h2 class="section-title">ANIME <span>UNIVERSE</span></h2>
+            <p class="section-subtitle">Explore your favourite worlds</p>
+        </div>
+        <a class="view-all" href="#wallpapers" onclick="filterWallpapers('all')">View All →</a>
+    </div>
+
+    <div class="categories">
+
+        <div class="category-card" onclick="filterWallpapers('naruto')">
+            <img src="naruto-card.png" alt="Naruto">
+            <div class="category-name">NARUTO</div>
+        </div>
+
+        <div class="category-card" onclick="filterWallpapers('onepiece')">
+            <img src="onepiece-card.png" alt="One Piece">
+            <div class="category-name">ONE PIECE</div>
+        </div>
+
+        <div class="category-card" onclick="filterWallpapers('demonslayer')">
+            <img src="demonslayer-card.png" alt="Demon Slayer">
+            <div class="category-name">DEMON SLAYER</div>
+        </div>
+
+        <div class="category-card" onclick="filterWallpapers('dragonball')">
+            <img src="dragonball-card.png" alt="Dragon Ball">
+            <div class="category-name">DRAGON BALL</div>
+        </div>
+
+        <div class="category-card" onclick="filterWallpapers('jujutsu')">
+            <img src="jujutsu-card.png" alt="Jujutsu Kaisen">
+            <div class="category-name">JUJUTSU KAISEN</div>
+        </div>
+
+        <div class="category-card" onclick="filterWallpapers('aot')">
+            <img src="AOT-card.png" alt="Attack on Titan">
+            <div class="category-name">ATTACK ON TITAN</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FEATURE -->
+
+<section class="feature">
+    <div class="feature-content">
+        <h2>MAKE YOUR SCREEN <span>AWESOME</span></h2>
+        <p>
+            Discover amazing anime wallpapers in one place.
+            Explore your favourite collections and download
+            high-quality images for your phone.
+        </p>
+    </div>
+    <img src="Luffy.png" alt="Luffy">
+</section>
+
+<!-- WALLPAPERS -->
+
+<section id="wallpapers">
+
+    <div class="gallery-heading">
+        <div>
+            <h2 class="section-title">LATEST <span>WALLPAPERS</span></h2>
+            <p class="section-subtitle">Find your next favourite wallpaper</p>
+        </div>
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input id="searchInput" type="search" placeholder="Search anime wallpapers..." oninput="applySelectedCategory()">
+        </div>
+    </div>
+
+    <div class="gallery-tools">
+        <button class="filter-btn active" data-category="all" onclick="filterWallpapers('all')">All</button>
+        <button class="filter-btn" data-category="naruto" onclick="filterWallpapers('naruto')">Naruto</button>
+        <button class="filter-btn" data-category="onepiece" onclick="filterWallpapers('onepiece')">One Piece</button>
+        <button class="filter-btn" data-category="demonslayer" onclick="filterWallpapers('demonslayer')">Demon Slayer</button>
+        <button class="filter-btn" data-category="dragonball" onclick="filterWallpapers('dragonball')">Dragon Ball</button>
+        <button class="filter-btn" data-category="jujutsu" onclick="filterWallpapers('jujutsu')">Jujutsu Kaisen</button>
+        <button class="filter-btn" data-category="aot" onclick="filterWallpapers('aot')">Attack on Titan</button>
+    </div>
+
+    <div class="wallpaper-gallery" id="wallpaper-gallery">
+        <div class="gallery-message">Loading Wallpapers...</div>
+    </div>
+
+</section>
+
+<!-- COMMUNITY -->
+
+<section class="community" id="community">
+    <h2>JOIN THE <span>FOX COMMUNITY</span></h2>
+    <p>Get fresh anime wallpapers, updates and more!</p>
+
+    <div class="social-links">
+        <a class="whatsapp" href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k" target="_blank">◉ Join WhatsApp Channel →</a>
+        <a class="telegram" href="https://t.me/fox_anime_wallpaper77" target="_blank">➤ Join Telegram Channel →</a>
+    </div>
+</section>
+
+<footer>
+    <div><strong>FOX ANIME WALLPAPER</strong></div>
+    <div>Anime • Wallpapers • Forever</div>
+    <div>Made for Anime Lovers © 2026</div>
+</footer>
+
+<script>
+const gallery = document.getElementById("wallpaper-gallery");
+
+const username = "FoxAnime-77";
+const repository = "FoxAnime-77.github.io";
+const branch = "main";
+
+const apiURL =
       
