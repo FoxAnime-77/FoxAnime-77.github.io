@@ -4,11 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>FOX ANIME WALLPAPER</title>
 <meta name="description" content="Fox Anime Wallpaper - HD and 4K anime wallpapers.">
 
-<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -17,41 +16,20 @@
     box-sizing: border-box;
 }
 
-:root {
-    --orange: #ff7215;
-    --purple: #a52cff;
-    --bg: #08060e;
-    --card: #15101e;
-    --text: #ffffff;
-    --muted: #aaa3b5;
-}
-
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
 }
 
 body {
-    background: var(--bg);
-    color: var(--text);
+    background: #08070d;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: -1;
-    background:
-    radial-gradient(circle at 10% 15%, #8b35ff16, transparent 30%),
-    radial-gradient(circle at 90% 55%, #ff721510, transparent 30%);
-}
-
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 button {
@@ -59,65 +37,55 @@ button {
     cursor: pointer;
 }
 
+:root {
+    --orange: #ff7900;
+    --purple: #8b35ff;
+    --card: #15121e;
+}
+
 /* HEADER */
 
 header {
-    height: 76px;
-    padding: 0 7%;
+    width: 100%;
+    padding: 16px 7%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(8,6,14,.92);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid #ffffff12;
+    background: rgba(8,7,13,.95);
+    border-bottom: 1px solid #292033;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+    font-size: 19px;
+    font-weight: 800;
 }
 
 .logo img {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid var(--orange);
-    box-shadow: 0 0 16px #ff721555;
 }
 
-.logo-text {
-    font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.logo-text span {
+.logo span {
     color: var(--orange);
-}
-
-.logo small {
-    display: block;
-    font-size: 8px;
-    color: #a69bad;
-    letter-spacing: 4px;
-    margin-top: -3px;
 }
 
 nav {
     display: flex;
+    gap: 25px;
     align-items: center;
-    gap: 30px;
 }
 
 nav a {
-    font-size: 12px;
-    font-weight: 600;
-    color: #c7c1d0;
+    color: #ccc;
+    font-size: 13px;
     transition: .3s;
 }
 
@@ -125,237 +93,188 @@ nav a:hover {
     color: var(--orange);
 }
 
-.header-social {
-    display: flex;
-    gap: 10px;
-}
-
-.social-icon {
-    width: 36px;
-    height: 36px;
-    display: grid;
-    place-items: center;
-    border-radius: 10px;
-    background: #ffffff0b;
-    border: 1px solid #ffffff16;
-    transition: .3s;
-}
-
-.social-icon svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
-}
-
-.social-icon.wa {
-    color: #20d878;
-}
-
-.social-icon.tg {
-    color: #29a9e8;
-}
-
-.social-icon:hover {
-    transform: translateY(-4px);
-    background: #ffffff15;
-}
-
 .menu-btn {
     display: none;
-    color: white;
-    font-size: 25px;
-    border: none;
     background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
 }
 
 /* HERO */
 
 .hero {
-    min-height: 600px;
-    padding: 65px 8%;
-    position: relative;
+    min-height: 570px;
+    padding: 70px 8%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 35px;
+    position: relative;
+    isolation: isolate;
     overflow: hidden;
+
     background:
-    linear-gradient(90deg, #08060e 5%, #08060ee8 42%, #08060e35 100%),
+    linear-gradient(
+        90deg,
+        #08070d 5%,
+        rgba(8,7,13,.91) 43%,
+        rgba(8,7,13,.25)
+    ),
     url("hero-bg.jpg") center/cover;
+    
+    border-bottom: 1px solid #ff790022;
 }
 
 .hero::before {
     content: "";
     position: absolute;
-    width: 430px;
-    height: 430px;
-    right: 10%;
-    top: 10%;
-    border-radius: 50%;
-    background: #ff72151a;
+    width: 400px;
+    height: 400px;
+    right: 7%;
+    top: 12%;
+    background: #ff790022;
     filter: blur(100px);
+    border-radius: 50%;
+    z-index: -1;
 }
 
 .hero-content {
-    max-width: 610px;
+    max-width: 580px;
     position: relative;
     z-index: 2;
+
+    padding: 25px;
+    border-left: 3px solid var(--orange);
+    border-radius: 0 16px 16px 0;
+
+    background: linear-gradient(
+        100deg,
+        #15101ec9,
+        #15101e45
+    );
+
+    backdrop-filter: blur(5px);
+    box-shadow: 10px 0 40px #00000018;
 }
 
 .tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
+    display: inline-block;
+    color: var(--orange);
+    border: 1px solid #ff790077;
+    background: #ff790018;
     padding: 9px 17px;
-    border: 1px solid #ff721566;
-    background: #ff721515;
-    color: #ff974d;
     border-radius: 30px;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 2px;
-    margin-bottom: 25px;
-}
-
-.tag::before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--orange);
-    box-shadow: 0 0 10px var(--orange);
+    margin-bottom: 22px;
+    box-shadow: 0 0 20px #ff790022;
 }
 
 .hero h1 {
-    font-size: clamp(42px, 6vw, 76px);
-    font-weight: 900;
-    line-height: 1.13;
-    letter-spacing: -2px;
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.15;
+    font-weight: 800;
+    text-shadow: 0 5px 25px #00000088;
 }
 
 .hero h1 span {
     color: var(--orange);
-    text-shadow: 0 0 35px #ff721544;
+    text-shadow: 0 0 30px #ff790066;
 }
 
 .hero p {
-    max-width: 470px;
-    color: #bcb5c9;
+    color: #d0c8dc;
+    margin: 20px 0 28px;
+    line-height: 1.9;
     font-size: 13px;
-    line-height: 2;
-    margin: 22px 0 30px;
-}
-
-.hero-buttons {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 13px;
+    max-width: 470px;
 }
 
 .main-btn {
-    padding: 15px 25px;
     display: inline-block;
-    color: #130b05;
-    background: linear-gradient(100deg, #ff7215, #ffb02c);
-    border-radius: 9px;
+    background: linear-gradient(90deg, var(--orange), #ffae00);
+    color: #100b08;
+    padding: 14px 25px;
+    border-radius: 8px;
     font-size: 12px;
-    font-weight: 900;
-    box-shadow: 0 8px 30px #ff721533;
+    font-weight: 800;
     transition: .3s;
+    box-shadow: 0 5px 25px #ff790044;
 }
 
 .main-btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 35px #ff721566;
-}
-
-.secondary-btn {
-    padding: 14px 22px;
-    border: 1px solid #ffffff30;
-    border-radius: 9px;
-    font-size: 12px;
-    font-weight: 700;
-    transition: .3s;
-}
-
-.secondary-btn:hover {
-    border-color: var(--purple);
-    background: #a52cff18;
+    box-shadow: 0 0 30px #ff790077;
 }
 
 .hero-image {
-    width: 42%;
-    max-width: 440px;
+    width: 38%;
+    max-width: 370px;
     position: relative;
     z-index: 2;
-    animation: float 4s ease-in-out infinite;
+    animation: heroFloat 4s ease-in-out infinite;
 }
 
 .hero-image img {
     width: 100%;
-    max-height: 490px;
+    max-height: 450px;
     object-fit: contain;
-    filter: drop-shadow(0 0 30px #ff721544);
+    filter:
+        drop-shadow(0 0 25px #ff790055)
+        drop-shadow(0 0 40px #8b35ff33);
 }
 
-@keyframes float {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(-14px); }
+@keyframes heroFloat {
+    0%,100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-13px);
+    }
 }
 
 /* STATS */
 
 .stats {
-    padding: 25px 8%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
-    background: #100c18;
-    border-top: 1px solid #ffffff12;
-    border-bottom: 1px solid #ffffff12;
+    padding: 25px 8%;
+    background: #100d17;
+    border-top: 1px solid #282033;
+    border-bottom: 1px solid #282033;
 }
 
 .stat {
     text-align: center;
-    padding: 10px;
 }
 
 .stat h2 {
-    font-size: 27px;
-    font-weight: 900;
     color: var(--orange);
+    font-size: 25px;
 }
 
 .stat p {
-    color: #aaa2b6;
-    font-size: 10px;
-    margin-top: 3px;
-    letter-spacing: 1px;
+    color: #aaa;
+    font-size: 11px;
 }
 
-/* SECTION COMMON */
+/* COMMON SECTION */
 
 section {
-    padding: 85px 8%;
+    padding: 75px 8%;
 }
 
 .section-heading {
     text-align: center;
-    margin-bottom: 42px;
-}
-
-.section-heading .mini {
-    color: var(--orange);
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 38px;
 }
 
 .section-heading h2 {
-    font-size: clamp(26px,4vw,37px);
-    font-weight: 900;
+    font-size: 30px;
+    font-weight: 800;
 }
 
 .section-heading h2 span {
@@ -363,109 +282,82 @@ section {
 }
 
 .section-heading p {
-    color: var(--muted);
+    color: #999;
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 9px;
 }
 
 /* CATEGORIES */
 
 .categories {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
 }
 
 .category-card {
-    height: 205px;
     position: relative;
+    height: 190px;
+    border-radius: 15px;
     overflow: hidden;
-    border-radius: 16px;
-    border: 1px solid #ffffff1c;
+    border: 1px solid #34253e;
     cursor: pointer;
-    background: #17111f;
-    transition: .35s;
+    transition: .3s;
+    background: #17121f;
 }
 
 .category-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-6px);
     border-color: var(--orange);
-    box-shadow: 0 12px 35px #ff72151c;
+    box-shadow: 0 8px 30px #8b35ff22;
 }
 
 .category-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .5s;
+    transition: .4s;
 }
 
 .category-card:hover img {
-    transform: scale(1.12);
+    transform: scale(1.08);
 }
 
 .category-card::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg,#08060ef5 0%,#08060e15 75%);
+    background: linear-gradient(0deg, #08070df5, transparent 85%);
 }
 
 .category-name {
     position: absolute;
+    z-index: 2;
     bottom: 17px;
-    left: 18px;
-    z-index: 2;
-    font-size: 16px;
-    font-weight: 900;
-    letter-spacing: .5px;
-}
-
-.category-number {
-    position: absolute;
-    top: 13px;
-    right: 14px;
-    z-index: 2;
-    color: white;
-    background: #08060e99;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 10px;
-    border: 1px solid #ffffff22;
-}
-
-/* FEATURE BANNER */
-
-.feature {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
-    padding: 55px 8%;
-    background:
-    radial-gradient(circle at 85% 50%, #a52cff28, transparent 35%),
-    linear-gradient(120deg,#1c1029,#100c19);
-    border-top: 1px solid #a52cff33;
-    border-bottom: 1px solid #a52cff33;
-}
-
-.feature-content {
-    max-width: 650px;
-}
-
-.feature .mini {
-    color: var(--orange);
-    font-size: 10px;
-    letter-spacing: 3px;
+    left: 17px;
+    font-size: 17px;
     font-weight: 800;
 }
 
+/* FEATURE */
+
+.feature {
+    background: linear-gradient(120deg, #171020, #0b0911);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    border-top: 1px solid #2b2035;
+    border-bottom: 1px solid #2b2035;
+}
+
+.feature-content {
+    max-width: 600px;
+}
+
 .feature h2 {
-    font-size: clamp(25px,4vw,39px);
-    font-weight: 900;
-    margin: 13px 0;
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
 .feature h2 span {
@@ -473,76 +365,74 @@ section {
 }
 
 .feature p {
-    color: #aaa2b6;
-    font-size: 12px;
-    line-height: 2;
+    color: #aaa;
+    font-size: 13px;
+    line-height: 1.9;
 }
 
 .feature img {
-    width: 190px;
-    max-height: 210px;
+    width: 230px;
+    max-height: 240px;
     object-fit: contain;
-    filter: drop-shadow(0 0 25px #a52cff55);
 }
 
-/* GALLERY */
+/* WALLPAPER GALLERY */
 
 #wallpapers {
-    scroll-margin-top: 90px;
+    scroll-margin-top: 85px;
 }
 
 .gallery-tools {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .filter-btn {
-    padding: 10px 17px;
-    background: #15101e;
-    border: 1px solid #ffffff1c;
-    color: #c5bdcf;
+    padding: 9px 17px;
+    border: 1px solid #392b48;
+    background: #15121e;
+    color: #ccc;
     border-radius: 30px;
-    font-size: 10px;
-    font-weight: 700;
+    font-size: 11px;
     transition: .3s;
 }
 
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--orange);
+    color: #100b08;
     border-color: var(--orange);
-    color: #100a05;
-    box-shadow: 0 4px 18px #ff721533;
+    font-weight: 800;
 }
 
 .wallpaper-gallery {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 22px;
 }
 
 .wallpaper-card {
-    background: linear-gradient(145deg,#21172e,#110e19);
+    background: linear-gradient(145deg, #21152e, #111019);
+    border: 1px solid #49305c;
     padding: 9px;
     border-radius: 14px;
-    border: 1px solid #ffffff1a;
     overflow: hidden;
     transition: .3s;
+    box-shadow: 0 0 15px #8b35ff12;
 }
 
 .wallpaper-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-5px);
     border-color: var(--orange);
-    box-shadow: 0 10px 30px #ff721522;
+    box-shadow: 0 0 22px #ff790033;
 }
 
 .wallpaper-card img {
     width: 100%;
-    height: 260px;
+    height: 245px;
     display: block;
     object-fit: cover;
     border-radius: 9px;
@@ -558,11 +448,10 @@ section {
 .wallpaper-actions a {
     flex: 1;
     text-align: center;
-    padding: 10px 4px;
-    border-radius: 7px;
-    font-size: 10px;
-    font-weight: 800;
-    transition: .3s;
+    padding: 9px 5px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
 }
 
 .preview-btn {
@@ -570,97 +459,142 @@ section {
     color: white;
 }
 
-.preview-btn:hover {
-    background: #56336e;
-}
-
 .download-btn {
-    background: linear-gradient(90deg,#ff7215,#ffae29);
-    color: #130b05;
-}
-
-.download-btn:hover {
-    box-shadow: 0 0 15px #ff721555;
+    background: var(--orange);
+    color: #100b08;
 }
 
 .gallery-message {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     text-align: center;
-    padding: 55px 15px;
-    color: #c5bdcf;
+    padding: 45px 15px;
+    color: #bbb;
     font-size: 13px;
-    line-height: 2;
-    background: #15101e;
-    border: 1px solid #ffffff15;
-    border-radius: 15px;
+    line-height: 1.8;
 }
 
 .retry-btn {
     margin-top: 15px;
-    padding: 11px 22px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 7px;
+    border-radius: 6px;
     background: var(--orange);
-    color: #100a05;
-    font-weight: 900;
-}
-
-/* COMMUNITY */
-
-.community {
-    text-align: center;
-    background:
-    radial-gradient(circle at 50% 0%,#8b35ff24,transparent 60%),
-    #100c18;
-    border-top: 1px solid #ffffff13;
-}
-
-.community .mini {
-    color: var(--orange);
-    font-size: 10px;
-    letter-spacing: 3px;
+    color: #111;
     font-weight: 800;
 }
 
+/* COMMUNITY - NEW DESIGN */
+
+.community {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    text-align: center;
+    padding: 90px 8%;
+
+    background:
+        radial-gradient(
+            ellipse at 15% 50%,
+            #a52cff35,
+            transparent 45%
+        ),
+        radial-gradient(
+            ellipse at 85% 50%,
+            #ff790028,
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            #1c1029,
+            #0c0913,
+            #1b1026
+        );
+
+    border-top: 1px solid #a52cff55;
+    border-bottom: 1px solid #ff790044;
+}
+
+.community::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    border: 1px solid #ffffff12;
+    border-radius: 20px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.community::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #8b35ff16;
+    filter: blur(90px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.community .mini {
+    display: inline-block;
+    color: #ff9b55;
+    font-size: 10px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    padding: 9px 17px;
+    border-radius: 30px;
+    background: #a52cff20;
+    border: 1px solid #a52cff66;
+    box-shadow: 0 0 20px #a52cff22;
+}
+
 .community h2 {
-    font-size: clamp(27px,4vw,37px);
-    margin-top: 12px;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-top: 20px;
     font-weight: 900;
+    text-shadow: 0 5px 20px #000;
 }
 
 .community h2 span {
     color: var(--orange);
+    text-shadow: 0 0 25px #ff790055;
 }
 
 .community p {
-    color: #aaa2b6;
-    font-size: 12px;
-    margin: 12px 0 30px;
+    max-width: 460px;
+    color: #c4bbd1;
+    margin: 15px auto 32px;
+    font-size: 13px;
+    line-height: 2;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
+    gap: 18px;
     flex-wrap: wrap;
-    gap: 15px;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 11px;
-    min-width: 195px;
-    padding: 14px 22px;
-    border-radius: 10px;
+    gap: 12px;
+    min-width: 215px;
+    padding: 16px 23px;
+    border-radius: 11px;
     font-size: 12px;
     font-weight: 800;
     transition: .3s;
+    border: 1px solid #ffffff30;
 }
 
 .social-links svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     fill: currentColor;
 }
 
@@ -677,98 +611,109 @@ section {
 }
 
 .social-links a:hover {
-    transform: translateY(-5px);
-    filter: brightness(1.1);
+    transform: translateY(-6px) scale(1.03);
+    filter: brightness(1.12);
+    border-color: white;
 }
 
 /* FOOTER */
 
 footer {
-    padding: 28px 8%;
+    padding: 25px 8%;
     text-align: center;
-    background: #08060e;
-    border-top: 1px solid #ffffff12;
-    color: #81798e;
-    font-size: 10px;
+    color: #777;
+    font-size: 11px;
+    border-top: 1px solid #292033;
 }
 
 footer span {
     color: var(--orange);
-    font-weight: 800;
 }
 
 /* MOBILE */
 
-@media(max-width: 900px) {
+@media(max-width: 800px) {
+
     header {
-        padding: 0 5%;
-    }
-
-    nav {
-        gap: 15px;
-    }
-
-    .header-social {
-        display: none;
-    }
-
-    section {
-        padding: 65px 5%;
-    }
-
-    .wallpaper-gallery {
-        grid-template-columns: repeat(3,1fr);
-    }
-
-    .hero {
-        padding: 55px 6%;
-    }
-}
-
-@media(max-width: 650px) {
-    header {
-        height: 68px;
-    }
-
-    .logo img {
-        width: 39px;
-        height: 39px;
-    }
-
-    .logo-text {
-        font-size: 15px;
-    }
-
-    .menu-btn {
-        display: block;
+        padding: 13px 5%;
     }
 
     nav {
         display: none;
         position: absolute;
-        top: 68px;
+        top: 70px;
         left: 0;
         width: 100%;
-        background: #100c18;
-        padding: 22px;
+        background: #100d17;
+        padding: 20px;
         flex-direction: column;
-        border-bottom: 1px solid #ffffff20;
+        border-bottom: 1px solid #33243e;
     }
 
     nav.show {
         display: flex;
     }
 
-    .hero {
-        min-height: 500px;
-        padding: 55px 6%;
-        background:
-        linear-gradient(90deg,#08060eeF,#08060e99),
-        url("hero-bg.jpg") center/cover;
+    .menu-btn {
+        display: block;
     }
 
-    .hero h1 {
-        font-size: 45px;
+    .hero {
+        min-height: 470px;
+        padding: 55px 6%;
+    }
+
+    .hero-image {
+        width: 30%;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .category-card {
+        height: 150px;
+    }
+
+    .wallpaper-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .wallpaper-card img {
+        height: 210px;
+    }
+
+    .feature img {
+        width: 150px;
+    }
+}
+
+@media(max-width: 650px) {
+
+    .hero {
+        background:
+            radial-gradient(
+                ellipse at 80% 40%,
+                #a52cff25,
+                transparent 50%
+            ),
+            linear-gradient(
+                110deg,
+                #08060e,
+                #130b1b
+            ),
+            url("hero-bg.jpg") center/cover;
+    }
+
+    .hero-content {
+        padding: 18px;
+        border-left-width: 2px;
     }
 
     .hero-image {
@@ -776,7 +721,7 @@ footer span {
         right: -35px;
         bottom: 0;
         width: 48%;
-        opacity: .38;
+        opacity: .48;
         z-index: 1;
     }
 
@@ -784,36 +729,59 @@ footer span {
         z-index: 2;
     }
 
+    .hero h1 {
+        font-size: 45px;
+    }
+
     .hero p {
-        max-width: 360px;
+        max-width: 350px;
     }
 
-    .stats {
-        padding: 20px 3%;
+    .community {
+        padding: 70px 6%;
     }
 
-    .stat h2 {
-        font-size: 22px;
+    .community::before {
+        inset: 10px;
     }
 
-    .categories {
-        grid-template-columns: repeat(2,1fr);
-        gap: 13px;
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links a {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media(max-width: 480px) {
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero-image {
+        display: block;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
     }
 
     .category-card {
-        height: 145px;
+        height: 125px;
     }
 
     .category-name {
-        font-size: 12px;
-        left: 11px;
+        font-size: 13px;
+        left: 10px;
         bottom: 12px;
-    }
-
-    .wallpaper-gallery {
-        grid-template-columns: repeat(2,1fr);
-        gap: 13px;
     }
 
     .wallpaper-card {
@@ -821,91 +789,43 @@ footer span {
     }
 
     .wallpaper-card img {
-        height: 205px;
+        height: 180px;
     }
 
     .wallpaper-actions a {
-        font-size: 9px;
-        padding: 9px 2px;
+        font-size: 10px;
     }
 
     .feature {
-        padding: 45px 6%;
+        flex-direction: column;
+        text-align: center;
     }
 
     .feature img {
-        width: 125px;
+        width: 170px;
     }
 }
 
-@media(max-width: 380px) {
-    .hero h1 {
-        font-size: 37px;
-    }
-
-    .hero-image {
-        width: 43%;
-    }
-
-    .wallpaper-card img {
-        height: 175px;
-    }
-
-    .category-card {
-        height: 125px;
-    }
-
-    .social-links a {
-        width: 100%;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-
 <header>
 
     <a href="#" class="logo">
         <img src="logo.jpg" alt="Fox Logo">
-        <div class="logo-text">
-            FOX <span>ANIME</span>
-            <small>W A L L P A P E R</small>
-        </div>
+        <div>FOX <span>ANIME</span></div>
     </a>
 
-    <nav id="navigation">
-        <a href="#">HOME</a>
-        <a href="#categories">CATEGORIES</a>
-        <a href="#wallpapers">WALLPAPERS</a>
-        <a href="#community">COMMUNITY</a>
-    </nav>
-
-    <div class="header-social">
-
-        <a class="social-icon wa"
-           href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k"
-           target="_blank" rel="noopener" aria-label="WhatsApp">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7c-1.7 0-3.4-.5-4.8-1.3l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.3 4.6Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2-.2.2-.3.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-.9-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
-            </svg>
-        </a>
-
-        <a class="social-icon tg"
-           href="https://t.me/fox_anime_wallpaper77"
-           target="_blank" rel="noopener" aria-label="Telegram">
-
-            <svg viewBox="0 0 24 24">
-                <path d="M21.9 3.1c-.3-.3-.8-.4-1.3-.2L2.1 10.1c-.8.3-.8 1.4.1 1.7l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.7-3.3 4.8 3.5c.6.4 1.4.1 1.6-.6l3-14.4c.1-.5-.1-1-.5-1.3ZM9.2 12.8l9.1-5.7-7.5 7.2-.3 2.7-1.3-4.2Z"/>
-            </svg>
-        </a>
-
-    </div>
-
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="navigation">
+        <a href="#">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#wallpapers">Wallpapers</a>
+        <a href="#community">Community</a>
+    </nav>
 
 </header>
 
@@ -918,31 +838,24 @@ footer span {
         <div class="tag">WELCOME TO FOX ANIME</div>
 
         <h1>
-            YOUR DAILY<br>
-            DOSE OF<br>
-            <span>ANIME.</span>
+            YOUR DAILY DOSE OF
+            <span>ANIME</span>
         </h1>
 
         <p>
             Discover amazing HD and 4K anime wallpapers.
             Explore your favourite anime characters and
-            give your screen a completely new look.
+            give your screen a new look.
         </p>
 
-        <div class="hero-buttons">
-            <a href="#wallpapers" class="main-btn">
-                EXPLORE WALLPAPERS ↗
-            </a>
-
-            <a href="#categories" class="secondary-btn">
-                EXPLORE ANIME
-            </a>
-        </div>
+        <a href="#wallpapers" class="main-btn">
+            EXPLORE WALLPAPERS
+        </a>
 
     </div>
 
     <div class="hero-image">
-        <img src="Luffy.png" alt="Luffy Anime Character">
+        <img src="Luffy.png" alt="Anime Character">
     </div>
 
 </div>
@@ -953,17 +866,17 @@ footer span {
 
     <div class="stat">
         <h2>HD</h2>
-        <p>HIGH QUALITY</p>
+        <p>High Quality</p>
     </div>
 
     <div class="stat">
         <h2>4K</h2>
-        <p>ULTRA HD</p>
+        <p>Ultra HD Wallpapers</p>
     </div>
 
     <div class="stat">
         <h2>FREE</h2>
-        <p>FREE DOWNLOADS</p>
+        <p>Free Downloads</p>
     </div>
 
 </div>
@@ -973,8 +886,7 @@ footer span {
 <section id="categories">
 
     <div class="section-heading">
-        <div class="mini">EXPLORE YOUR UNIVERSE</div>
-        <h2>ANIME <span>COLLECTIONS</span></h2>
+        <h2>ANIME <span>CATEGORIES</span></h2>
         <p>Choose your favourite anime collection</p>
     </div>
 
@@ -982,37 +894,31 @@ footer span {
 
         <div class="category-card" onclick="filterWallpapers('naruto')">
             <img src="naruto-card.png" alt="Naruto">
-            <div class="category-number">01</div>
             <div class="category-name">NARUTO</div>
         </div>
 
         <div class="category-card" onclick="filterWallpapers('onepiece')">
             <img src="onepiece-card.png" alt="One Piece">
-            <div class="category-number">02</div>
             <div class="category-name">ONE PIECE</div>
         </div>
 
         <div class="category-card" onclick="filterWallpapers('demonslayer')">
             <img src="demonslayer-card.png" alt="Demon Slayer">
-            <div class="category-number">03</div>
             <div class="category-name">DEMON SLAYER</div>
         </div>
 
         <div class="category-card" onclick="filterWallpapers('dragonball')">
             <img src="dragonball-card.png" alt="Dragon Ball">
-            <div class="category-number">04</div>
             <div class="category-name">DRAGON BALL</div>
         </div>
 
         <div class="category-card" onclick="filterWallpapers('jujutsu')">
             <img src="jujutsu-card.png" alt="Jujutsu Kaisen">
-            <div class="category-number">05</div>
             <div class="category-name">JUJUTSU KAISEN</div>
         </div>
 
         <div class="category-card" onclick="filterWallpapers('aot')">
             <img src="AOT-card.png" alt="Attack on Titan">
-            <div class="category-number">06</div>
             <div class="category-name">ATTACK ON TITAN</div>
         </div>
 
@@ -1025,27 +931,26 @@ footer span {
 <section class="feature">
 
     <div class="feature-content">
-        <div class="mini">YOUR SCREEN. YOUR STYLE.</div>
 
-        <h2>MAKE YOUR SCREEN <span>AWESOME.</span></h2>
+        <h2>MAKE YOUR SCREEN <span>AWESOME</span></h2>
 
         <p>
             Find your favourite anime wallpapers in one place.
             Explore different collections and download your
             favourite images in high quality.
         </p>
+
     </div>
 
-    <img src="Luffy.png" alt="Luffy">
+    <img src="Luffy.png" alt="Anime Wallpaper">
 
 </section>
 
-<!-- WALLPAPER GALLERY -->
+<!-- WALLPAPERS -->
 
 <section id="wallpapers">
 
     <div class="section-heading">
-        <div class="mini">YOUR FAVOURITE CHARACTERS</div>
         <h2>WALLPAPER <span>GALLERY</span></h2>
         <p>Explore and download your favourite wallpapers</p>
     </div>
@@ -1054,4 +959,96 @@ footer span {
 
         <button class="filter-btn active" onclick="filterWallpapers('all')">All Wallpapers</button>
 
-        <
+        <button class="filter-btn" onclick="filterWallpapers('naruto')">Naruto</button>
+
+        <button class="filter-btn" onclick="filterWallpapers('onepiece')">One Piece</button>
+
+        <button class="filter-btn" onclick="filterWallpapers('demonslayer')">Demon Slayer</button>
+
+        <button class="filter-btn" onclick="filterWallpapers('dragonball')">Dragon Ball</button>
+
+        <button class="filter-btn" onclick="filterWallpapers('jujutsu')">Jujutsu Kaisen</button>
+
+        <button class="filter-btn" onclick="filterWallpapers('aot')">Attack on Titan</button>
+
+    </div>
+
+    <div class="wallpaper-gallery" id="wallpaper-gallery">
+        <div class="gallery-message">Loading Wallpapers...</div>
+    </div>
+
+</section>
+
+<!-- COMMUNITY -->
+
+<section class="community" id="community">
+
+    <div class="mini">BE PART OF OUR WORLD</div>
+
+    <h2>JOIN OUR <span>COMMUNITY</span></h2>
+
+    <p>
+        Stay connected and get new anime wallpapers.
+        Join Fox Anime Wallpaper today!
+    </p>
+
+    <div class="social-links">
+
+        <a class="whatsapp"
+           href="https://whatsapp.com/channel/0029Vb981ToA89Mr5RIr3o1k"
+           target="_blank" rel="noopener">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L0 24l6.5-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7c-1.7 0-3.4-.5-4.8-1.3l-.4-.2-3.8 1 1-3.7-.3-.4a9.8 9.8 0 1 1 8.3 4.6Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2c-.2.3-.8 1-1 1.2-.2.2-.3.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-.9-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.2 3.1c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/>
+            </svg>
+
+            WHATSAPP CHANNEL
+
+        </a>
+
+        <a class="telegram"
+           href="https://t.me/fox_anime_wallpaper77"
+           target="_blank" rel="noopener">
+
+            <svg viewBox="0 0 24 24">
+                <path d="M21.9 3.1c-.3-.3-.8-.4-1.3-.2L2.1 10.1c-.8.3-.8 1.4.1 1.7l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.7-3.3 4.8 3.5c.6.4 1.4.1 1.6-.6l3-14.4c.1-.5-.1-1-.5-1.3ZM9.2 12.8l9.1-5.7-7.5 7.2-.3 2.7-1.3-4.2Z"/>
+            </svg>
+
+            TELEGRAM CHANNEL
+
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 <span>FOX ANIME WALLPAPER</span> | All Rights Reserved
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+const gallery = document.getElementById("wallpaper-gallery");
+
+const username = "FoxAnime-77";
+const repository = "FoxAnime-77.github.io";
+const branch = "main";
+
+const flatApi =
+"https://data.jsdelivr.com/v1/package/gh/" +
+username + "/" + repository + "@" + branch + "/flat";
+
+const rawBase =
+"https://raw.githubusercontent.com/" +
+username + "/" + repository + "/" + branch + "/";
+
+let allWallpapers = [];
+let selectedCategory = "all";
+let wallpapersLoaded = false;
+let loadingWallpapers = false;
+
+f
